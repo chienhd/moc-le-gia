@@ -1,0 +1,937 @@
+/*Reset css*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    text-decoration: none !important;
+}
+b, strong {
+    font-weight: bold;
+}
+/*End Reset css*/
+body {
+    line-height: 24px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background: #fff;
+    color: #666;
+}
+
+#page {
+    overflow-x: hidden;
+}
+
+/*----------------------------------------------------------Header----------------------------------------------------*/
+
+.site-header {
+    background: rgba(30, 30, 29, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+}
+
+.site-header.fixed_header {
+    padding: 0;
+    background: #1e1e1d;
+}
+
+#logo {
+    -webkit-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+    max-width: 196px;
+    padding: 0;
+    margin-left: 0;
+}
+
+#logo > img {
+    margin-top: 5px;
+}
+
+#bs-primary-navbar-collapse {
+    margin-top: 0;
+}
+
+.site-header-navbar {
+    background-color: transparent;
+    border: none transparent;
+    padding-top: 5px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    height: auto;
+}
+
+#primary-menu::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#primary-menu .menu-item {
+    display: inline-grid;
+    position: relative;
+    padding: 0 10px;
+}
+
+#primary-menu > .menu-item > a {
+    font-size: 15px;
+    line-height: 25px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+
+#primary-menu > .menu-item > a::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #edc14f;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+#primary-menu > .menu-item > a:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+#primary-menu > .menu-item:hover > a {
+    color: #edc14f !important;
+}
+
+#primary-menu > .menu-item:hover > .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#primary-menu .sub-menu {
+    position: absolute;
+    width: 250px;
+    padding: 10px 0;
+    margin-left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9999;
+    transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -webkit-transition: all 0.3s linear 0s;
+    transform: translateY(50%);
+}
+
+#primary-menu .sub-menu li {
+    width: 100%;
+    clear: both;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+}
+
+#primary-menu .sub-menu li a {
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    padding: 8px 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#primary-menu li .sub-menu li:hover > a {
+    color: #edc14f;
+}
+
+#primary-menu li .sub-menu li:hover ul.sub-menu {
+    left: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+
+#primary-menu li .sub-menu ul.sub-menu {
+    position: absolute;
+    left: 120%;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0);
+}
+
+.close-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 8;
+}
+
+.menu-item span.toggle-sub-menu {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .navbar-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .site-header {
+        background: transparent;
+    }
+
+    #wrap-primary-menu {
+        height: 100vh;
+    }
+
+    .site-header-navbar {
+        padding-top: 0
+    }
+
+    .site-header-navbar .navbar-header {
+        background-color: rgb(75 75 74);
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 100%;
+    }
+
+    .site-header-navbar .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    #bs-primary-navbar-collapse {
+        padding: 0;
+        height: 100vh;
+        display: block;
+        border: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        position: fixed;
+        top: 60px;
+        bottom: 0;
+        width: 260px;
+        overflow-y: auto;
+        border-right: 1px solid #edc14f;
+        background-color: #222222;
+        overflow-x: hidden;
+        -webkit-transition: -webkit-transform .3s ease;
+        -moz-transition: -moz-transform .3s ease;
+        -o-transition: -o-transform .3s ease;
+        transition: transform .3s ease;
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    #bs-primary-navbar-collapse.open {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    .close-menu.open {
+        display: block;
+    }
+
+    #primary-menu .menu-item {
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        display: block;
+    }
+
+    #primary-menu li a:before {
+        content: none !important;
+    }
+
+    #primary-menu li a:hover {
+        text-decoration: none;
+        background: #3d3d3d;
+        color: #edc14f !important;
+    }
+
+    #primary-menu > .menu-item {
+        border-bottom: 1px solid #edc14f;
+    }
+
+    #primary-menu > .menu-item > a {
+        padding: 14px 10px;
+        color: #edc14f;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    #primary-menu .sub-menu li {
+        display: block;
+    }
+
+    #primary-menu .sub-menu li a {
+        padding: 14px 10px 14px 20px;
+        color: #edc14f;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    #primary-menu li, #primary-menu li a {
+        width: 100%;
+        display: block;
+    }
+
+    #primary-menu > .menu-item > .sub-menu,
+    #primary-menu > .menu-item:hover > .sub-menu {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    #primary-menu li .sub-menu li ul.sub-menu,
+    #primary-menu li .sub-menu li:hover ul.sub-menu {
+        left: 0;
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #primary-menu .sub-menu {
+        padding: 0;
+        margin: 0;
+        max-height: 0;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: none;
+        background: rgb(34 34 34);
+        -webkit-transition: all 0.35s ease-in-out;
+        -moz-transition: all 0.35s ease-in-out;
+        transition: all 0.35s ease-in-out;
+    }
+
+    span.toggle-sub-menu, span.toggle-sub-menu .fa-minus {
+        display: none;
+    }
+
+    .menu-item-has-children > span.toggle-sub-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        padding: 15px 30px !important;
+        right: 0;
+        z-index: 1;
+        cursor: pointer;
+        color: #edc14f !important;
+    }
+
+    ul.sub-menu.sub-menu-active li {
+        border-top: 1px solid #edc14f;
+    }
+
+    .ul.sub-menu.sub-menu-active .ul.sub-menu.sub-menu-active {
+        position: relative;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    #primary-menu li .sub-menu ul.sub-menu {
+        position: relative;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(0);
+    }
+
+    #primary-menu li .sub-menu ul.sub-menu a {
+        padding-left: 30px;
+    }
+
+    .sub-menu-active {
+        max-height: 500px !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+
+    }
+
+
+}
+
+/*--------------------------------------------------------End Header--------------------------------------------------*/
+
+/*-----------------------------------------------------Home Carousel---------------------------------------------------*/
+.primary-carousel {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    max-height: 700px;
+    width: 100%;
+    max-width: 1920px;
+    overflow: hidden;
+}
+
+.primary-carousel .owl-item.active {
+    max-height: 700px;
+    width: 100% !important;
+    max-width: 1920px;
+}
+
+.primary-carousel .owl-item .item {
+    max-height: 700px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.primary-carousel .owl-item img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+
+.primary-carousel .owl-dots {
+    margin-top: 10px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.primary-carousel .owl-dots .owl-dot span {
+    background: rgba(255, 255, 255, 0.8) !important
+}
+
+.primary-carousel .owl-dots .owl-dot.active span,
+.primary-carousel .owl-dots .owl-dot:hover span {
+    background: #edc14f !important;
+}
+
+.primary-carousel .owl-prev, .primary-carousel .owl-next {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
+    border: 1px solid black;
+}
+
+.primary-carousel .owl-prev {
+    left: 15px;
+}
+
+.primary-carousel .owl-next {
+    right: 15px;
+}
+
+
+/*------------------------------------------------------End Home Carousel----------------------------------------------*/
+
+/*--------------------------------------------------------Menu Second--------------------------------------------------*/
+#wrap-second-menu {
+    padding: 15px 0;
+}
+
+#wrap-second-menu::after, #second-menu::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+#second-menu {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    width: 100%;
+    margin-right: auto;
+}
+
+#second-menu li {
+    display: block;
+    float: left;
+    list-style: none;
+    text-align: center;
+    margin: 10px 0;
+    width: 16.33%;
+}
+
+#second-menu li a span {
+    color: #666;
+    line-height: 1;
+    margin-top: 5px;
+}
+
+#second-menu li:hover a span {
+    color: #edc14f;
+}
+
+#second-menu li a img {
+    display: table;
+    margin: 0 auto;
+    max-width: 61px;
+    padding-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+    #second-menu {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #second-menu {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #second-menu li {
+        width: 33.33%;
+    }
+}
+
+/*-------------------------------------------------------End Menu Second-----------------------------------------------*/
+
+
+/*--------------------------------------------3. Bộ sưu tập nội thất - Mộc Lê Gia--------------------------------------*/
+.home-collect {
+    padding: 60px 0px;
+    background: #222222;
+}
+.wrap-h1-title {
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.wrap-h1-title::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.h1-title {
+    display: block;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+.h1-title::after {
+    position: absolute;
+    content: "";
+    bottom: -35px;
+    left: 0;
+    right: 0;
+    max-width: 225px;
+    width: 100%;
+    height: 1px;
+    background: #edc14f;
+    margin: 0 auto;
+}
+
+.home-collect__description {
+    margin-bottom: 40px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.home-collect__description, .home-collect__description p {
+    position: relative;
+    width: 100%;
+    min-height: 23px;
+    text-align: center;
+    color: #fff;
+}
+.home-collect__description::before {
+    content: url(/wp-content/themes/moc-le-gia/assets/images/icon/icon_start.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.home-collect__description::after {
+    content: url(/wp-content/themes/moc-le-gia/assets/images/icon/icon_end.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.home-collect .col {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.home-collect__product-top {
+    height: auto;
+    position: relative;
+    padding-bottom: 98.50%;
+    overflow: hidden;
+}
+.home-collect__product-top .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.home-collect__product-top .image::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(0,0,0,0.4);
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+.home-collect__product-top::after {
+    content: url(/wp-content/themes/moc-le-gia/assets/images/hover/before_images.png);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.home-collect__product:hover .home-collect__product-top::after {
+    visibility: visible;
+    opacity: 1;
+    top: 50%;
+}
+.home-collect__product-top .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+
+.home-collect__product-top .info {
+    position: absolute;
+    top: 45%;
+    -webkit-transform: translateY(-45%);
+    -moz-transform: translateY(-45%);
+    -o-transform: translateY(-45%);
+    transform: translateY(-45%);
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: block; 
+    text-align: center;
+    z-index: 1;
+}
+.home-collect__product-top .info .title {
+    font-size: 20px;
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+}
+.home-collect__product-top .info .link {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    color: #fff;
+    border: 1px solid #edc14f;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.home-collect__product-bottom .sub-title {
+    font-size: 16px;
+    padding: 0px;
+    margin: 20px 0px 20px 0px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+.home-collect__product-bottom .description {
+    font-size: 13px;
+    color: #cccccc;
+    line-height: 20px;
+}
+@media (max-width: 991.98px) and (min-width: 768px) {
+    .home-collect .col {
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .home-collect .col:not(:first-child) {
+        margin-top: 40px;
+    }
+}
+    
+/*--------------------------------------------3. Bộ sưu tập nội thất - Mộc Lê Gia end----------------------------------*/
+
+
+/*--------------------------------------------4. Sản phẩm--------------------------------------------------------------*/
+.wrap-home-product {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+.home-product {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: nowrap;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+}
+.home-product-first {
+    position: relative;
+    width: 33%;
+    display: block;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #222222;
+}
+.home-product-first img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.home-product-first .info {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.home-product__info {
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.home-product__img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.home-product__link {
+    text-transform: uppercase;
+    color: #fff !important;
+    padding: 5px;
+    font-size: 20px;
+    line-height: 25px;
+    position: relative;
+    margin: 0;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+}
+.home-product__link::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    border: #edc14f solid 2px;
+    top: -16px;
+    right: -16px;
+    bottom: -16px;
+    left: -16px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: top, right, bottom, left;
+    transition-property: top, right, bottom, left;
+}
+.home-product-item {
+    overflow: hidden;
+}
+.home-product-item:hover .home-product__link::before {
+    opacity: 1;
+    visibility: visible;
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+}
+.home-product__title {
+    color: #fff;
+    margin-top: 8px;
+    display: block;
+}
+.home-product-second {
+    position: relative;
+    width: 67%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-flow: column;
+}
+.home-product-second_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50%;
+    width: 100%;
+}
+.home-product-second_top1 {
+    border-right: 1px solid #fff;
+}
+.home-product-second_top1, .home-product-second_top2 {
+    width: 50%;
+    display: block;
+    float: left;
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+.home-product-second_bottom {
+    height: 50%;
+    width: 100%;
+    position: relative;
+}
+
+@media(max-width: 767.98px) and (min-width: 576px) {
+    .home-product__link {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .home-product__title {
+        margin-top: 5px;
+        line-height: 1.2;
+    }
+}
+
+@media(max-width: 575.98px) {
+    .home-product {
+        display: block;
+    }
+    .home-product-second {
+        width: 100%;
+    }
+    .home-product-second_top {
+        display: block;
+    }
+    .home-product-item {
+        width: 100%;
+        height: 200px;
+    }
+    .home-product__img {
+        height: 100%;
+    }
+}
+/*--------------------------------------------4. Sản phẩm end----------------------------------------------------------*/
