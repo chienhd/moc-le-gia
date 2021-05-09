@@ -935,3 +935,580 @@ body {
     }
 }
 /*--------------------------------------------4. Sản phẩm end----------------------------------------------------------*/
+
+
+/*--------------------------------------------5. Tin tức---------------------------------------------------------------*/
+.wrap-home-carousel-news {
+    background: #222222;
+    padding: 60px 0;
+}
+.wrap-home-carousel-news  .wrap-title {
+    margin-bottom: 60px;
+}
+.wrap-home-carousel-news .title {
+    font-size: 24px;
+    line-height: 25px;
+    color: #fff;
+    padding: 0px 0px 11px 0px;
+    margin: 0px 0px 30px 0px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+.wrap-home-carousel-news .title::after {
+    width: 25%;
+    max-width: 285px;
+    left: 50%;
+    -webkit-transition: translateX(-50%);
+    -moz-transition: translateX(-50%);
+    -o-transition: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    height: 1px;
+    background: #edc14f;
+    margin: 0 auto; 
+}
+.home-carousel-news{
+    margin-bottom: 40px;
+}
+.home-carousel-news::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: #464444;
+    bottom: -40px;
+    left: 0;
+}
+
+
+.home-carousel-news__image {
+    width: 45%;
+    display: block;
+    float: left;
+}
+.home-carousel-news__info {
+    width: 55%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+}
+.home-carousel-news__info > a {
+    font-size: 15px;
+    line-height: 25px;
+    color: #fff;
+    font-weight: 600;
+}
+.home-carousel-news__info > a:hover {
+    color: #edc14f !important;
+}
+.home-carousel-news__info .excerpt {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: #cccccc;
+    max-width: 300px;
+    text-align: justify;
+}
+.home-carousel-news .owl-prev, .home-carousel-news .owl-next {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
+    border: 1px solid black;
+}
+
+.home-carousel-news .owl-prev {
+    left: -35px;
+}
+
+.home-carousel-news .owl-next {
+    right: -35px;
+}
+@media (max-width: 991.98px) {
+    .home-carousel-news__image {
+        width: 100%;
+    }
+    .home-carousel-news__info {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+    .home-carousel-news__info .excerpt {
+        max-width: 100%;
+    }
+    .home-carousel-news .owl-prev, .home-carousel-news .owl-next {
+        display: none !important;
+    }
+}
+
+
+/*--------------------------------------------5. Tin tức end ----------------------------------------------------------*/
+
+/*--------------------------------------------6. Home Video -----------------------------------------------------------*/
+.wrap-home-videos {
+    background: #222222;
+    position: relative;
+}
+.wrap-home-videos .wrap-title {
+    margin-bottom: 60px;
+}
+.wrap-home-videos .h2-title {
+    font-size: 24px;
+    line-height: 25px;
+    color: #fff;
+    padding: 0px 0px 11px 0px;
+    margin: 0px 0px 30px 0px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+.wrap-home-videos .h2-title::after {
+    width: 25%;
+    max-width: 285px;
+    left: 50%;
+    -webkit-transition: translateX(-50%);
+    -moz-transition: translateX(-50%);
+    -o-transition: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    height: 1px;
+    background: #edc14f;
+    margin: 0 auto; 
+}
+.wrap-home-videos .border {
+    margin-top: 30px;
+    display: block;
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #464444;
+}
+.home-video__top {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.home-video__top img {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+}
+.home-video__top iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto; 
+    z-index: 0;
+}
+.home-video__top_start-video {
+    position: absolute;
+    top: 50%;
+    padding: 0px;
+    left: 50%;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.home-video__top_start-video  img {
+    width: 64px;
+    height: 64px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+.home-video__bottom {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.home-video__bottom::after {
+    content: "";
+    clear: both;;
+    display: table;
+}
+.home-video__bottom img {
+    display: block;
+    float: left;
+}
+.home-video__bottom > p {
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #cccccc;
+    font-style: italic;
+    display: block;
+    float: left;
+    width: calc(100% - 32px);
+}
+
+/*--------------------------------------------6. Home Video end---------------------------------------------------------*/
+
+/*--------------------------------------------6. Home Customer ---------------------------------------------------------*/
+
+.wrap-home-client {
+    padding-top: 60px;
+    background: #222222;
+    position: relative;
+}
+.wrap-home-client .wrap-title {
+    margin-bottom: 60px;
+}
+.wrap-home-client .h2-title {
+    font-size: 24px;
+    line-height: 25px;
+    color: #fff;
+    padding: 0px 0px 11px 0px;
+    margin: 0px 0px 30px 0px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+.wrap-home-client .h2-title::after {
+    width: 25%;
+    max-width: 285px;
+    left: 50%;
+    -webkit-transition: translateX(-50%);
+    -moz-transition: translateX(-50%);
+    -o-transition: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    height: 1px;
+    background: #edc14f;
+    margin: 0 auto;
+}
+.home-client__preview {
+    opacity: 0.7;
+}
+
+/*--------------------------------------------6. Home Video end---------------------------------------------------------*/
+
+/*--------------------------------------------6. Home Contact form-------------------------------------------------------*/
+/*Contact from*/
+
+#home-customer-wrap {
+    background-color: rgba(40, 39, 61, 1);
+    background-image: url(/wp-content/themes/client/assets/images/home-customer-bg.jpg);
+    background-origin: content-box;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: top left;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.home-customer-title {
+    width: 100%;
+    display: block;
+    font-size: 20px;
+    color: #4c4c4c;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.home-customer-right-des {
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 5px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#home-customer-right-frm {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#home-customer-right-frm input {
+    border: none;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    padding: 2px 10px;
+    font-size: 15px;
+    width: 100%;
+    height: 38px;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+#home-customer-wrap .home-customer-title {
+    color: #fff;
+    text-align: center;
+}
+
+#home-customer-wrap > .container > .row > div {
+    padding: 40px !important;
+}
+
+@media (min-width: 1200px) {
+    #home-customer-wrap > .container > .row > div {
+        padding: 40px 350px !important;
+    }
+}
+
+@media(max-width: 767.98px) {
+    #home-customer-wrap > .container > .row > div {
+        padding: 40px 12px !important;
+    }
+    #home-customer-right-frm {
+        max-width: 90%;
+    }
+}
+
+div.wpcf7 {
+    margin: 0;
+    padding: 0;
+}
+
+div.wpcf7-response-output {
+    margin: 2em .5em 1em;
+    padding: .2em 1em;
+}
+
+div.wpcf7 .screen-reader-response {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.wpcf7-form-control-wrap {
+    position: relative;
+}
+
+.wpcf7-display-none {
+    display: none;
+}
+
+/*--------------------------------------------6. Home Contact Form end----------------------------------------------------*/
+
+
+/*========================================Footer========================================*/
+footer {
+    background-color: #040404;
+    color: #999;
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+.footer_widget_title {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
+    min-height: 49px;
+}
+
+footer .widget p {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+footer .widget a {
+    color: #999;
+}
+
+.footer_top ul li {
+    list-style-type: none;
+}
+
+.footer_top .footer_widget_link ul,
+.footer_top .footer_widget_support ul {
+    padding-left: 1em;
+}
+
+.footer_top .footer_widget_link ul li:before,
+.footer_top .footer_widget_support ul li:before {
+    content: "\f0da";
+    font: normal normal normal 14px/1 FontAwesome;
+    padding-right: 5px;
+    position: relative;
+    top: -2px;
+}
+
+.footer_top .textwidget .social a {
+    color: #999;
+    display: inline-block;
+    padding: 2px 10px;
+}
+
+.footer_bottom {
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.footer_bottom ul {
+    display: block;
+    margin-bottom: 0;
+}
+
+.footer_bottom ul li {
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    width: calc(100% / 8);
+    margin-top: 10px;
+}
+
+.footer_widget_newspapers ul {
+    margin-bottom: 0;
+}
+
+.footer_widget_newspapers ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_widget_newspapers ul li {
+    float: left;
+    margin-bottom: 5px;
+}
+
+.footer_widget_newspapers ul li::after,
+.footer_widget_newspapers ul li a::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_widget_newspapers ul li a img {
+    height: 36px;
+    width: auto;
+    padding: 5px;
+}
+
+
+.copyright {
+    padding: 15px 0;
+    border-top: 1px solid #2f1d0a;
+    text-align: center;
+}
+
+
+@media (max-width: 991.98px) {
+    .footer_widget_title {
+        margin: 0px;
+        padding: 10px 0;
+        min-height: 40px;
+    }
+
+    .footer_top .col-footer {
+        padding: 2px 10px;
+        border-bottom: 1px solid #5f3811;
+    }
+
+    .col-footer .textwidget {
+        display: none;
+    }
+
+    .footer_widget_newspapers {
+        display: none;
+    }
+
+    .footer_widget_name p:first-child {
+        display: none;
+    }
+
+    .footer_widget_link .textwidget {
+        margin-bottom: 5px;
+    }
+
+    .footer_top .textwidget a::after {
+        content: "";
+        clear: both;
+        display: none;
+    }
+
+    .footer_bottom {
+        margin-top: 10px;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    .footer_bottom {
+        margin-top: 0;
+    }
+    .footer_bottom ul li {
+        width: calc(100% / 4);
+    }
+
+    .footer_bottom ul li img {
+        max-width: 100%;
+        height: auto;
+    }
+    .copyright {
+        margin-bottom: 36px;
+    }
+}
+
+/*========================================end footer========================================*/
+/*
+back to top*/
+.back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    line-height: 19px;
+    background-color: rgba(235, 235, 235, 0.80);
+    font-size: 0;
+}
+
+.back-to-top img {
+    width: 100%;
+    height: auto;
+}

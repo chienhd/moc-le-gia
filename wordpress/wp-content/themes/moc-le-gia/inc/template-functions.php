@@ -35,3 +35,14 @@ function moc_le_gia_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'moc_le_gia_pingback_header' );
+
+
+/**
+ * A Custom function for get an option
+ */
+if ( ! function_exists( 'prefix_get_option' ) ) {
+  function prefix_get_option( $option = '', $default = null ) {
+    $options = get_option( 'my_framework' ); // Attention: Set your unique id of the framework
+    return ( isset( $options[$option] ) ) ? $options[$option] : $default;
+  }
+}

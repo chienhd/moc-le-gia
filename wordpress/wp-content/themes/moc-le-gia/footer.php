@@ -11,21 +11,53 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'moc-le-gia' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'moc-le-gia' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'moc-le-gia' ), 'moc-le-gia', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	
+<footer id="footer" class="site-footer">
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-footer">
+                    <?php echo prefix_get_option('footer_tab_block_1'); ?>
+                </div>
+                <div class="col-md-3 col-footer">
+                    <?php echo prefix_get_option('footer_tab_block_2'); ?>
+                </div>
+                <div class="col-md-3 col-footer">
+                    <?php echo prefix_get_option('footer_tab_block_3'); ?>
+                </div>
+                <div class="col-md-3 col-footer">
+                    <?php echo prefix_get_option('footer_tab_block_4'); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php
+    $gallery_opt = prefix_get_option('footer_tab_block_5');
+    if (!empty($gallery_opt)) {
+        $gallery_ids = explode(',', $gallery_opt);
+        ?>
+        <div class="container">
+            <div class="footer_bottom">
+                <ul class="clearfix">
+                    <?php
+                    foreach ($gallery_ids as $gallery_item_id) {
+                        echo '<li>' . wp_get_attachment_image($gallery_item_id, 'full') . '</li>';
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+        <?php
+    }
+    ?>
+
+    <div class="copyright text-center"><?php echo prefix_get_option('footer_tab_block_5_2') ?></div>
+
+    </div>
+    </div>
+    </div>
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
