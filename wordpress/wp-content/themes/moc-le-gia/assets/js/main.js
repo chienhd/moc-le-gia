@@ -76,6 +76,9 @@ $('.home-carousel-client').owlCarousel({
         0: {
            items: 1
         },
+        576: {
+           items: 3
+        },
         768: {
            items: 3,
         },
@@ -85,7 +88,7 @@ $('.home-carousel-client').owlCarousel({
     },
     center: true,
     margin: 0,
-    padding: 10,
+    padding: 20,
     smartSpeed: 450,
     autoHeight: false,
     loop: true,
@@ -94,3 +97,24 @@ $('.home-carousel-client').owlCarousel({
     dots: false,
     navText: ["<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/next_banner.png'>"]
 });
+
+$('.home-partner-carousel').owlCarousel({
+    responsive: {
+        0: {
+           items: 3
+        },
+        992: {
+           items: 5,
+        }
+    },
+    margin: 20,
+    padding: 20,
+    smartSpeed: 450,
+    autoHeight: false,
+    loop: true,
+    autoplay: false,
+    nav: false,
+    dots: false,
+});
+
+

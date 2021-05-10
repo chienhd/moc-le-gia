@@ -1,10 +1,10 @@
-<div id="home-customer-wrap" style="background-image: url('https://nhadephanoi.vn/wp-content/themes/client/assets/images/home-customer-bg.jpg')">
+<div id="home-wrap-contact-form" style="background-image: url('https://nhadephanoi.vn/wp-content/themes/client/assets/images/home-customer-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <span class="home-customer-title">NHẬN TƯ VẤN VỀ PHONG CÁCH THIẾT KẾ PHÙ HỢP VỚI BẠN</span>
-                <span class="home-customer-right-des">Tư vấn miễn phí. Tặng kèm Ebook những mẫu Thiết kế nội thất</span>
-                <div id="home-customer-right-frm">
+                <span class="home-contact-form-title">NHẬN TƯ VẤN VỀ PHONG CÁCH THIẾT KẾ PHÙ HỢP VỚI BẠN</span>
+                <span class="home-contact-form-right-des">Tư vấn miễn phí. Tặng kèm Ebook những mẫu Thiết kế nội thất</span>
+                <div id="home-contact-form-right-frm">
                     <div role="form" class="wpcf7" id="wpcf7-f221-o1" lang="en-US" dir="ltr">
 <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
 <form action="/#wpcf7-f221-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
