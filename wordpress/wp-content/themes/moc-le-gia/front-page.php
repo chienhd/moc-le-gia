@@ -22,7 +22,9 @@ get_header();
             get_template_part('template-parts/home', 'product');
             get_template_part('template-parts/home', 'news');
             get_template_part('template-parts/home', 'video');
-            get_template_part('template-parts/home', 'customer');
+            get_template_part('template-parts/home', 'client');
+            get_template_part('template-parts/home', 'interior-knowledge');
+            get_template_part('template-parts/home', 'partner');
             get_template_part('template-parts/home', 'contact-form');
         ?>
     </main><!-- #main -->
