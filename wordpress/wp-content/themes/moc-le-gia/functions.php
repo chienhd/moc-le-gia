@@ -47,6 +47,7 @@ if (!function_exists('moc_le_gia_setup')) :
          * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
          */
         add_theme_support('post-thumbnails');
+        add_image_size( 'post-thumbnails', 366, 360, array( 'center', 'center' ) );
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus(

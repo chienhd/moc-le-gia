@@ -991,6 +991,11 @@ body {
     display: block;
     float: left;
 }
+.home-carousel-news__image img {
+    width: 256px;
+    height: 175px;
+    object-fit: cover;
+}
 .home-carousel-news__info {
     width: 55%;
     display: block;
@@ -1013,6 +1018,11 @@ body {
     color: #cccccc;
     max-width: 300px;
     text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 .home-carousel-news .owl-prev, .home-carousel-news .owl-next {
     width: 30px;

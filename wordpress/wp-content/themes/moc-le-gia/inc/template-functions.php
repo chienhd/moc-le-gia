@@ -46,3 +46,11 @@ if ( ! function_exists( 'prefix_get_option' ) ) {
     return ( isset( $options[$option] ) ) ? $options[$option] : $default;
   }
 }
+
+function dd($input)
+{
+	echo '<pre>';
+	print_r($input);
+	echo '<pre>';
+	die;
+}

@@ -1,28 +1,24 @@
 <div class="home-partner">
 	<div class="container">
 		<div class="wrap-title">
-			<h2 class="h2-title"> Đối tác của Mộc Lê Gia</h2>
+			<h2 class="h2-title"><?php echo prefix_get_option('home-partner-title'); ?></h2>
 		</div>
-		<div class="home-partner-carousel owl-carousel owl-them">
+
+		<?php 
+		$partner = prefix_get_option('home-partner-gallery');
+		if(isset($partner) && !empty($partner)):
+		    $gallery_ids = explode(',', $partner);
+		?>
+		<div class="home-partner-carousel owl-carousel owl-theme">
+			<?php foreach ($gallery_ids as $gallery_item_id): ?>
 	        <div class="item">
-	        	<img src="/wp-content/themes/moc-le-gia/assets/images/logo-chateau-a-265x150.jpg">
+	        	<?php echo wp_get_attachment_image($gallery_item_id, 'full'); ?>
 	        </div>
-	        <div class="item">
-	        	<img src="/wp-content/themes/moc-le-gia/assets/images/logo-magis-a-265x150.jpg">
-	        </div>
-	        <div class="item">
-	        	<img src="/wp-content/themes/moc-le-gia/assets/images/logo-MD-a-265x150.jpg">
-	        </div>
-	        <div class="item">
-	        	<img src="/wp-content/themes/moc-le-gia/assets/images/logo-vico-a-265x150.jpg">
-	        </div>
-	         <div class="item">
-	        	<img src="/wp-content/themes/moc-le-gia/assets/images/logo-vico-a-265x150.jpg">
-	        </div>
-	         <div class="item">
-	        	<img src="/wp-content/themes/moc-le-gia/assets/images/logo-vico-a-265x150.jpg">
-	        </div>
-		</div>		
+	        <?php endforeach; ?>
+		</div>
+	  	<?php
+        endif;
+        ?>	
 	</div>	
 </div>
 

@@ -18,26 +18,290 @@ if (class_exists('CSF')) {
         'fields' => array(
             // A text field
             array(
-                'type'    => 'media',
-                'title'   => 'Logo',
+               'id' => 'opt-media-logo',
+                'type' => 'media',
+                'title' => 'Logo',
                 'library' => 'image',
+                'preview_size' => 'full',
                 'url' => false,
-                'class' => 'theme-option__preview-logo'
+            ),
+
+        )
+    ));
+     //banner
+
+    CSF::createSection($prefix, array(
+        'id' => 'home-partner',
+        'title' => 'Banner',
+        'fields' => array(
+            // A textarea field
+            array(
+                'id' => 'home-banner-gallery',
+                'type' => 'gallery',
+                'title' => 'Hình ảnh banner',
+                'add_title' => 'Thêm mới',
+                'edit_title' => 'Chỉnh sửa',
+                'clear_title' => 'Xóa',
+            ),
+
+        )
+    ));
+    // Bo suu tap noi that
+    CSF::createSection($prefix, array(
+        'title' => 'Bộ sưu tập nội thất',
+        'id' => 'home-collection',
+        'fields' => array(
+
+            array(
+                'id' => 'home-collection-title',
+                'type' => 'text',
+                'title' => 'Tiêu đề',
+                'default' => 'BỘ SƯU TẬP NỘI THẤT - MỘC LÊ GIA'
+            ),
+            array(
+                'id' => 'home-collection-desc',
+                'type' => 'textarea',
+                'title' => 'Mô tả',
+                'default' => 'Nhà là gia đình - Cùng trải nghiệm những sản phẩm và dịch vụ đẳng cấp hàng đầu thế giới, cùng tô điểm Yêu thương cho gia đình!'
+            ),
+            array(
+                'id' => 'home-collection-group',
+                'type' => 'group',
+                'title' => 'Thêm Bộ sưu tập',
+                'fields' => array(
+                    array(
+                        'id' => 'name',
+                        'type' => 'text',
+                        'title' => 'Tên Bộ sưu tập (Bên trên ảnh)',
+                    ),
+                    array(
+                        'id' => 'link',
+                        'type' => 'text',
+                        'title' => 'Đường dẫn cho Bộ sưu tập',
+                    ),
+                    array(
+                       'id' => 'image',
+                        'type' => 'media',
+                        'title' => 'Hình ảnh Bộ sưu tập',
+                        'library' => 'image',
+                        'preview_size' => 'full',
+                        'url' => false,
+                    ),
+                     array(
+                        'id' => 'name2',
+                        'type' => 'text',
+                        'title' => 'Tên Bộ sưu tập (Bên dưới)',
+                    ),
+                     array(
+                        'id'            => 'desc',
+                        'type'          => 'wp_editor',
+                        'title'         => 'Mô tả ngắn',
+                        'tinymce'       => true,
+                        'quicktags'     => true,
+                        'media_buttons' => false,
+                      
+                ),
+            ),
+          )      
+        )
+    ));
+
+      // san pham
+    CSF::createSection($prefix, array(
+        'title' => 'Sản phẩm',
+        'id' => 'home-product',
+        'fields' => array(
+            array(
+                'id' => 'home-product-group',
+                'type' => 'group',
+                'title' => 'Sản phẩm',
+                'fields' => array(
+                    array(
+                        'id' => 'name',
+                        'type' => 'text',
+                        'title' => 'Tên sản phẩm',
+                    ),
+                    array(
+                        'id' => 'link',
+                        'type' => 'text',
+                        'title' => 'Đường dẫn cho sản phẩm',
+                    ),
+                    array(
+                       'id' => 'image',
+                        'type' => 'media',
+                        'title' => 'Hình ảnh Sản phẩm',
+                        'library' => 'image',
+                        'preview_size' => 'full',
+                        'url' => false,
+                    ),
+                     array(
+                        'id' => 'link',
+                        'type' => 'text',
+                        'title' => 'Mô tả ngắn',
+                    ),
+                ),
             ),
 
         )
     ));
 
-    // Create a section
+      // Tin tức
     CSF::createSection($prefix, array(
-        'title' => 'Tab Title 2',
+        'title' => 'Tin tức',
+        'id' => 'home-news',
         'fields' => array(
 
+            array(
+                'id' => 'home-news-title',
+                'type' => 'text',
+                'title' => 'Tiêu đề',
+            ),
+            array(
+              'id'          => 'home-news-select-post',
+              'type'        => 'select',
+              'title'       => 'Chọn bài posts',
+              'placeholder' => 'Select posts',
+              'chosen'      => true,
+              'multiple'    => true,
+              'sortable'    => true,
+              'options'     => 'posts',
+            ),
+
+        )
+    ));
+
+        // Tin tức
+    CSF::createSection($prefix, array(
+        'title' => 'Video Nội thất',
+        'id' => 'home-video',
+        'fields' => array(
+
+            array(
+                'id' => 'home-video-title',
+                'type' => 'text',
+                'title' => 'Tiêu đề',
+            ),
+            array(
+                'id' => 'home-video-group',
+                'type' => 'group',
+                'title' => 'Video sản phẩm',
+                'fields' => array(
+                    array(
+                        'id' => 'name',
+                        'type' => 'text',
+                        'title' => 'Tên video',
+                    ),
+                    array(
+                       'id' => 'image',
+                        'type' => 'media',
+                        'title' => 'Hình ảnh video',
+                        'library' => 'image',
+                        'preview_size' => 'full',
+                        'url' => false,
+                    ),
+                    array(
+                        'id'    => 'iframe',
+                        'type'  => 'code_editor',
+                        'title'   => 'video (iframe)',
+                        'sanitize' => false,
+                        'settings' => array(
+                              'theme' => 'shadowfox',
+                              'mode' => 'htmlmixed',
+                        ),
+                      ),
+                ),
+            ),
+
+        )
+    ));
+
+    //KHÁCH HÀNG NÓI GÌ VỀ MỘC LÊ GIA
+     CSF::createSection($prefix, array(
+        'title' => 'Khách hàng',
+        'id' => 'home-client',
+        'fields' => array(
+
+            array(
+                'id' => 'home-client-title',
+                'type' => 'text',
+                'title' => 'Tiêu đề',
+            ),
+            array(
+                'id' => 'home-client-group',
+                'type' => 'group',
+                'title' => 'Khách hàng nói về mộc lê gia',
+                'fields' => array(
+                    array(
+                        'id' => 'name',
+                        'type' => 'text',
+                        'title' => 'Tên khách hàng',
+                    ),
+                    array(
+                        'id' => 'desc',
+                        'type' => 'wp_editor',
+                        'title' => 'Cảm nhận của khách hàng',
+                        'media_buttons' => false,
+                        'height'        => '100px',
+                    ),
+                    array(
+                       'id' => 'image',
+                        'type' => 'media',
+                        'title' => 'Hình ảnh khách hàng',
+                        'library' => 'image',
+                        'preview_size' => 'full',
+                        'url' => false,
+                    ),
+                   
+                ),
+            ),
+
+        )
+    ));
+
+    // KIẾN THỨC NỘI THẤT
+    CSF::createSection($prefix, array(
+        'title' => 'Kiến thức nội thất',
+        'id' => 'home-knowledge',
+        'fields' => array(
+
+            array(
+                'id' => 'home-knowledge-title',
+                'type' => 'text',
+                'title' => 'Tiêu đề',
+            ),
+            array(
+              'id'          => 'home-knowledge-select-post',
+              'type'        => 'select',
+              'title'       => 'Chọn bài posts',
+              'placeholder' => 'Select posts',
+              'chosen'      => true,
+              'multiple'    => true,
+              'sortable'    => true,
+              'options'     => 'posts',
+            ),
+
+        )
+    ));
+
+    //ĐỐI TÁC CỦA MỘC LÊ GIA
+
+    CSF::createSection($prefix, array(
+        'id' => 'home-partner',
+        'title' => 'Đối tác',
+        'fields' => array(
+          array(
+                'id' => 'home-partner-title',
+                'type' => 'text',
+                'title' => 'Tiêu đề',
+            ),
             // A textarea field
             array(
-                'id' => 'opt-textarea',
-                'type' => 'textarea',
-                'title' => 'Simple Textarea',
+                'id' => 'home-partner-gallery',
+                'type' => 'gallery',
+                'title' => 'Hình ảnh đối tác',
+                'add_title' => 'Thêm mới',
+                'edit_title' => 'Chỉnh sửa',
+                'clear_title' => 'Xóa',
             ),
 
         )

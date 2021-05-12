@@ -1,54 +1,42 @@
 <div class="home-interior-knowledge">
 	<div class="container">
 		<div class="wrap-title">
-			<h2 class="h2-title">kiến thức nội thất</h2>
+			<h2 class="h2-title"><?php echo prefix_get_option('home-knowledge-title'); ?></h2>
 		</div>
 		<div class="row">
-			<div class="col-sm-4">
-				<div class="content_item">
-				   <figure class="featured-thumbnail thumbnail">
-				      <a target="_blank" href="https://noithatkenli.vn/bi-quyet-lua-chon-san-pham-sofa-da-nhap-khau-ung-y" rel="nofollow">
-				      <img loading="lazy" class="lazyloaded" src="https://noithatkenli.vn/wp-content/uploads/2020/04/3814_Avenue_Fro-360x240.jpg">
-				      </a>
-				   </figure>
-				   <div class="post_meta">
-				      <a target="_blank" class="post-title" href="https://noithatkenli.vn/bi-quyet-lua-chon-san-pham-sofa-da-nhap-khau-ung-y" rel="nofollow" title="3 bí quyết đắt giá khi chọn mua sofa da nhập khẩu">3 bí quyết đắt giá khi chọn mua sofa da nhập khẩu</a>
-				      <div class="excerpt">
-				         Giữa hàng loạt đơn vị cung cấp sofa nhập khẩu trên thị trường, thật đau đầu để lựa chọn được...                                           
-				      </div>
-				   </div>
+			<?php
+			$query = new WP_Query(
+                            array(
+                                'post_type' => 'post',
+                                'post_status' => 'publish',
+                                'order' => 'DESC',
+                                'orderby' => 'ID',
+                                'post__in' => prefix_get_option('home-knowledge-select-post')
+                            )
+                        );
+			if($query->have_posts()) {
+				while ($query->have_posts()) {
+                    $query->the_post();
+		 	?>
+				<div class="col-sm-4">
+					<div class="content_item">
+					   <figure class="featured-thumbnail thumbnail">
+					      <a target="_blank" href="<?php echo esc_url(get_permalink()) ?>" rel="nofollow">
+					      <img loading="lazy" class="lazyloaded" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'post-thumbnails'); ?>" alt="<?php echo get_the_title(); ?>">
+					      </a>
+					   </figure>
+					   <div class="post_meta">
+					      <a target="_blank" class="post-title" href="<?php echo esc_url(get_permalink()) ?>"><?php echo get_the_title(); ?></a>
+					      <div class="excerpt">
+					         <?php echo get_the_excerpt(); ?>                                             
+					      </div>
+					   </div>
+					</div>
 				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="content_item">
-				   <figure class="featured-thumbnail thumbnail">
-				      <a target="_blank" href="https://noithatkenli.vn/bi-quyet-lua-chon-san-pham-sofa-da-nhap-khau-ung-y" rel="nofollow">
-				      <img loading="lazy" class="lazyloaded" src="https://noithatkenli.vn/wp-content/uploads/2020/04/3814_Avenue_Fro-360x240.jpg">
-				      </a>
-				   </figure>
-				   <div class="post_meta">
-				      <a target="_blank" class="post-title" href="https://noithatkenli.vn/bi-quyet-lua-chon-san-pham-sofa-da-nhap-khau-ung-y" rel="nofollow" title="3 bí quyết đắt giá khi chọn mua sofa da nhập khẩu">3 bí quyết đắt giá khi chọn mua sofa da nhập khẩu</a>
-				      <div class="excerpt">
-				         Giữa hàng loạt đơn vị cung cấp sofa nhập khẩu trên thị trường, thật đau đầu để lựa chọn được...                                           
-				      </div>
-				   </div>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="content_item">
-				   <figure class="featured-thumbnail thumbnail">
-				      <a target="_blank" href="https://noithatkenli.vn/bi-quyet-lua-chon-san-pham-sofa-da-nhap-khau-ung-y" rel="nofollow">
-				      <img loading="lazy" class="lazyloaded" src="https://noithatkenli.vn/wp-content/uploads/2020/04/3814_Avenue_Fro-360x240.jpg">
-				      </a>
-				   </figure>
-				   <div class="post_meta">
-				      	<a target="_blank" class="post-title" href="https://noithatkenli.vn/bi-quyet-lua-chon-san-pham-sofa-da-nhap-khau-ung-y" rel="nofollow" title="3 bí quyết đắt giá khi chọn mua sofa da nhập khẩu">3 bí quyết đắt giá khi chọn mua sofa da nhập khẩu</a>
-				      <div class="excerpt">
-				         Giữa hàng loạt đơn vị cung cấp sofa nhập khẩu trên thị trường, thật đau đầu để lựa chọn được...                                           
-				      </div>
-				   </div>
-				</div>
-			</div>
+			<?php
+					}
+				}	
+	     	?>
 		</div>
 	</div>	
 </div>
@@ -119,6 +107,11 @@
 
 	.home-interior-knowledge .content_item .post_meta .excerpt {
 	    color: #ccc;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    display: -webkit-box;
+	    -webkit-line-clamp: 3;
+	    -webkit-box-orient: vertical;
 	}
 
 	@media (max-width: 767.98px) {
