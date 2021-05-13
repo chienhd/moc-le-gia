@@ -8,6 +8,7 @@
  */
 
 get_header();
+
 ?>
 <style type="text/css">
     .category-banner {
