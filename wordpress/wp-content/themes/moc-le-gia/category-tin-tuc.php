@@ -8,6 +8,12 @@
  */
 
 get_header();
+
+$news = get_category_by_slug('tin-tuc');
+
+$categories = get_categories(
+    array('parent' => $news->cat_ID)
+);
 ?>
 <style type="text/css">
     .category-banner {
@@ -128,7 +134,7 @@ get_header();
 
     <div class="container">
         <section class="category__title-section">
-            <h1 class="title-header">Tin Tức</h1>
+            <h1 class="title-header"><?php echo $news->name; ?></h1>
             <div class="mota_title"><p>Cập nhật nhanh chóng, chính xác & đầy đủ các tin tức về Nội thất, tin tức báo chí & tin tức thị trường. </p>
             </div>
         </section>
@@ -137,96 +143,39 @@ get_header();
     <div class="wrap-news__content">
         <div class="container">
             <div class="row">
+                <?php
+                    $query = new WP_Query(
+                        array(
+                            'post_type' => 'post',
+                            'post_status' => 'publish',
+                            'order' => 'DESC',
+                            'orderby' => 'ID',
+                            'cat' => $news->cat_ID,
+                            'posts_per_page' => 6
+                        )
+                    );
+                    while ($query->have_posts()) {
+                        $query->the_post();
+                ?>
                 <div class="col-md-4 col-sm-6">
                     <div class="cate-news__content">
                        <figure class="featured-thumbnail">
-                          <a href="https://noithatkenli.vn/kenli-to-chuc-workshop-congratulations-to-the-vietnamese-architect-nhan-dip-ki-niem-thang-kien-truc-viet">
-                            <img alt="Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt" src="https://noithatkenli.vn/wp-content/uploads/2021/01/giuong-ngu-bi-rung-keu-cot-ket-4-360x240.jpg">
+                          <a href="<?php echo esc_url(get_permalink()) ?>">
+                            <img alt="<?php echo get_the_title(); ?>" src="<?php echo get_the_post_thumbnail_url(); ?>">
                           </a>
                        </figure>
                        <!-- Post Content -->
                        <div class="post_content">
                             <div class="post-title">
-                                <a href="https://noithatkenli.vn/kenli-to-chuc-workshop-congratulations-to-the-vietnamese-architect-nhan-dip-ki-niem-thang-kien-truc-viet" title="Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt">Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt</a>
+                                <a href="<?php echo esc_url(get_permalink()) ?>"><?php echo get_the_title(); ?></a>
                             </div>
                           <div class="excerpt">
-                             Trong suốt hai ngày qua, từ ngày 22/04/2021 đến ngày 23/04/2021, Kenli đã tổ chức 2 buổi Workshop- “Congratulations to the Vietnamese architect” nhằm gửi lời tri ân và vinh danh đến các vị kiến trúc sư thân...              
+                            <?php echo get_the_excerpt(); ?>        
                           </div>
                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="cate-news__content">
-                       <figure class="featured-thumbnail">
-                          <a href="https://noithatkenli.vn/kenli-to-chuc-workshop-congratulations-to-the-vietnamese-architect-nhan-dip-ki-niem-thang-kien-truc-viet">
-                            <img alt="Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt" src="https://noithatkenli.vn/wp-content/uploads/2021/04/worshop-Kenli-360x240.jpg">
-                          </a>
-                       </figure>
-                       <!-- Post Content -->
-                       <div class="post_content">
-                            <div class="post-title">
-                                <a href="https://noithatkenli.vn/kenli-to-chuc-workshop-congratulations-to-the-vietnamese-architect-nhan-dip-ki-niem-thang-kien-truc-viet" title="Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt">Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt</a>
-                            </div>
-                          <div class="excerpt">
-                             Trong suốt hai ngày qua, từ ngày 22/04/2021 đến ngày 23/04/2021, Kenli đã tổ chức 2 buổi Workshop- “Congratulations to the Vietnamese architect” nhằm gửi lời tri ân và vinh danh đến các vị kiến trúc sư thân...              
-                          </div>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="cate-news__content">
-                       <figure class="featured-thumbnail">
-                          <a href="https://noithatkenli.vn/kenli-to-chuc-workshop-congratulations-to-the-vietnamese-architect-nhan-dip-ki-niem-thang-kien-truc-viet">
-                            <img alt="Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt" src="https://noithatkenli.vn/wp-content/uploads/2021/04/CEO-Dinh-Thi-Xuan-Lan-360x240.jpg">
-                          </a>
-                       </figure>
-                       <!-- Post Content -->
-                       <div class="post_content">
-                            <div class="post-title">
-                                <a href="https://noithatkenli.vn/kenli-to-chuc-workshop-congratulations-to-the-vietnamese-architect-nhan-dip-ki-niem-thang-kien-truc-viet" title="Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt">Nội thất Kenli chia sẻ trên bản tin Kinh tế số VTC2</a>
-                            </div>
-                          <div class="excerpt">
-                             Trong suốt hai ngày qua, từ ngày 22/04/2021 đến ngày 23/04/2021, Kenli đã tổ chức 2 buổi Workshop- “Congratulations to the Vietnamese architect” nhằm gửi lời tri ân và vinh danh đến các vị kiến trúc sư thân...              
-                          </div>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="cate-news__content">
-                       <figure class="featured-thumbnail">
-                          <a href="https://noithatkenli.vn/kenli-to-chuc-workshop-congratulations-to-the-vietnamese-architect-nhan-dip-ki-niem-thang-kien-truc-viet">
-                            <img alt="Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt" src="https://noithatkenli.vn/wp-content/uploads/2021/01/giuong-ngu-co-kien-phai-lam-sao-5-1-360x240.jpg">
-                          </a>
-                       </figure>
-                       <!-- Post Content -->
-                       <div class="post_content">
-                            <div class="post-title">
-                                <a href="https://noithatkenli.vn/kenli-to-chuc-workshop-congratulations-to-the-vietnamese-architect-nhan-dip-ki-niem-thang-kien-truc-viet" title="Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt">Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt</a>
-                            </div>
-                          <div class="excerpt">
-                             Trong suốt hai ngày qua, từ ngày 22/04/2021 đến ngày 23/04/2021, Kenli đã tổ chức 2 buổi Workshop- “Congratulations to the Vietnamese architect” nhằm gửi lời tri ân và vinh danh đến các vị kiến trúc sư thân...              
-                          </div>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="cate-news__content">
-                       <figure class="featured-thumbnail">
-                          <a href="https://noithatkenli.vn/kenli-to-chuc-workshop-congratulations-to-the-vietnamese-architect-nhan-dip-ki-niem-thang-kien-truc-viet">
-                            <img alt="Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt" src="https://noithatkenli.vn/wp-content/uploads/2021/01/giuong-ngu-co-kien-phai-lam-sao-5-1-360x240.jpg">
-                          </a>
-                       </figure>
-                       <!-- Post Content -->
-                       <div class="post_content">
-                            <div class="post-title">
-                                <a href="https://noithatkenli.vn/kenli-to-chuc-workshop-congratulations-to-the-vietnamese-architect-nhan-dip-ki-niem-thang-kien-truc-viet" title="Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt">Workshop Kenli – kỉ niệm tháng Kiến Trúc Việt</a>
-                            </div>
-                          <div class="excerpt">
-                             Trong suốt hai ngày qua, từ ngày 22/04/2021 đến ngày 23/04/2021, Kenli đã tổ chức 2 buổi Workshop- “Congratulations to the Vietnamese architect” nhằm gửi lời tri ân và vinh danh đến các vị kiến trúc sư thân...              
-                          </div>
-                       </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
             <div class="row">
                 <div class="pagination pagination__posts"><ul><li class="active"><a href="#">1</a></li><li><a href="https://noithatkenli.vn/blogs/page/2" class="inactive">2</a></li>...<li><a href="https://noithatkenli.vn/blogs/page/46" class="inactive">46</a></li><li class="next"><a href="https://noithatkenli.vn/blogs/page/2">Next</a></li><li class="last"><a href="https://noithatkenli.vn/blogs/page/46">Last</a></li></ul></div>
