@@ -26,6 +26,7 @@
 	.home-partner {
 		background: #0e0e0e;
 		padding-bottom: 60px;
+		padding-top: 60px;
 	}
 	.home-partner .wrap-title {
 	    margin-bottom: 60px;

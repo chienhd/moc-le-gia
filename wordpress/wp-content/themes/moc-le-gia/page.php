@@ -335,18 +335,24 @@ $category = $wp_query->get_queried_object();
             .chitiet_bottom h3, .chitiet_bottom .h3 {
                 font-size: 22px;
             }
-
         </style>
+        <?php 
+        	$description = get_field('description-product-category-bottom', $category->taxonomy . '_' . $category->term_id);
+            if( !empty($description)) {
+         ?>
         <div class="container">
             <div class="chitiet_bottom" style="padding: 30px 0px;">
-            	<?php
-            		$description = get_field('description-product-category-bottom', $category->taxonomy . '_' . $category->term_id);
-            		if( !empty($description)) {
-            			echo $description;
-            		}
-            	?>
+            <?php
+            	echo $description;
+            ?>
             </div>
         </div>
+    	<?php } ?>
+    	
+        <?php
+        	get_template_part('template-parts/home', 'partner');
+            get_template_part('template-parts/home', 'contact-form');
+        ?>
     </main><!-- #main -->
 <?php
 get_footer();

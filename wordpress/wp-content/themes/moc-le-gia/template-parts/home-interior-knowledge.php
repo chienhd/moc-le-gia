@@ -45,7 +45,6 @@
 	.home-interior-knowledge {
 		background: #0e0e0e;
 		padding-top: 60px;
-		padding-bottom: 60px;
 	}
 	.home-interior-knowledge .wrap-title {
 	    margin-bottom: 60px;
