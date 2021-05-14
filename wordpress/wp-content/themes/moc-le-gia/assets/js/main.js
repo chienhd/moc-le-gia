@@ -118,3 +118,51 @@ $('.home-partner-carousel').owlCarousel({
 });
 
 
+$(document).ready(function() {
+    $('.tab_chitiet #tabs_list ul li').on('click', function($event) {
+        $('.tab_chitiet #tabs_list ul li').removeClass('active');
+        $($event.currentTarget).addClass('active');
+        let tabShowed = $($event.target).attr('aria-label');
+        $('.tab_chitiet .tab_content_container .content_tab').css('display', 'none');
+        $('.tab_chitiet .tab_content_container .content_tab' + tabShowed).css('display', 'block');
+    })
+});
+
+$('.product-carousel').owlCarousel({
+    center: true,
+    items:2,
+    loop:true,
+    margin:40,
+    nav: false,
+    dots: false,
+    responsive:{
+        600:{
+            items:2
+        }
+    }
+});
+
+
+
+/*category product*/
+
+$('.box_item .title_widget .name-cts').click(function(){
+    if($(this).closest('.box_item').hasClass('active')==true){
+        $(this).closest('.box_item').removeClass('active');
+        $(this).find('i').removeClass('fa-minus-square-o').addClass('fa-plus-square-o');
+    }   
+    else{
+        $(this).closest('.box_item').addClass('active');
+        $(this).find('i').removeClass('fa-plus-square-o').addClass('fa-minus-square-o');
+    }
+})
+
+
+$('.box_item_child .title').click(function(){
+    if($(this).closest('.box_item_child').hasClass('active')==true){
+        $(this).closest('.box_item_child').removeClass('active');
+    }   
+    else{
+        $(this).closest('.box_item_child').addClass('active');
+    }
+})
