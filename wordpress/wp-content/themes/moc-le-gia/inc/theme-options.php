@@ -500,5 +500,157 @@ if (class_exists('CSF')) {
     ));
     /**================End Footer Options================*/
 
+     /*Page Gioi Thieu*/
+     CSF::createSection($prefix, array(
+        'id' => 'page_introduce', // Set a unique slug-like ID
+        'title' => 'Page Giới thiệu',
+    ));
+    // Create a sub-tab
+    CSF::createSection($prefix, array(
+        'parent' => 'page_introduce', // The slug id of the parent section
+        'title' => 'Giới thiệu Block 1',
 
+        'fields' => array(
+            // Giới thiệu block 1
+           array(
+            'id' => 'page_introduce_block_1_title',
+            'type' => 'text',
+            'title' => 'Tiêu đề',
+        ),
+           array(
+            'id'            => 'page_introduce_block_1_editor',
+            'type'          => 'wp_editor',
+            'title'         => 'Nội dung block 1',
+            'tinymce'       => true,
+            'quicktags'     => true,
+            'media_buttons' => false,
+            'height'        => '100px',
+        ),
+           array(
+            'id' => 'page_introduce_block_1_image',
+            'type' => 'media',
+            'title' => 'Hình ảnh mô tả',
+            'library' => 'image',
+            'preview_size' => 'full',
+            'url' => false
+        ),
+
+       ),
+    ));
+    CSF::createSection($prefix, array(
+        'parent' => 'page_introduce', // The slug id of the parent section
+        'title' => 'Giới thiệu Block 2',
+
+        'fields' => array(
+            // Giới thiệu block 1
+           array(
+            'id' => 'page_introduce_block_2_title',
+            'type' => 'text',
+            'title' => 'Tiêu đề',
+        ),
+           array(
+            'id'            => 'page_introduce_block_2_editor',
+            'type'          => 'wp_editor',
+            'title'         => 'Nội dung block 2',
+            'tinymce'       => true,
+            'quicktags'     => true,
+            'media_buttons' => false,
+            'height'        => '100px',
+        ),
+            array(
+            'id' => 'page_introduce_block_2_image',
+            'type' => 'media',
+            'title' => 'Hình ảnh mô tả',
+            'library' => 'image',
+            'preview_size' => 'full',
+            'url' => false
+        ),
+
+       ),
+    ));
+    CSF::createSection($prefix, array(
+        'parent' => 'page_introduce', // The slug id of the parent section
+        'title' => 'Giới thiệu Block 3',
+
+        'fields' => array(
+            // Giới thiệu block 1
+           array(
+            'id' => 'page_introduce_block_3_title',
+            'type' => 'text',
+            'title' => 'Tiêu đề',
+        ),
+           array(
+            'id'            => 'page_introduce_block_3_editor',
+            'type'          => 'wp_editor',
+            'title'         => 'Nội dung block 3',
+            'tinymce'       => true,
+            'quicktags'     => true,
+            'media_buttons' => false,
+            'height'        => '100px',
+        ),
+       ),
+    ));
+    CSF::createSection($prefix, array(
+        'parent' => 'page_introduce', // The slug id of the parent section
+        'title' => 'Giới thiệu Block 4',
+
+        'fields' => array(
+            // Giới thiệu block 1
+           array(
+            'id' => 'page_introduce_block_4_title',
+            'type' => 'text',
+            'title' => 'Tiêu đề',
+        ),
+           array(
+            'id'            => 'page_introduce_block_4_editor',
+            'type'          => 'wp_editor',
+            'title'         => 'Nội dung block 4',
+            'tinymce'       => true,
+            'quicktags'     => true,
+            'media_buttons' => false,
+            'height'        => '100px',
+        ),
+            array(
+            'id' => 'page_introduce_block_4_image',
+            'type' => 'media',
+            'title' => 'Hình ảnh mô tả',
+            'library' => 'image',
+            'preview_size' => 'full',
+            'url' => false
+        ),
+
+       ),
+    ));
+    CSF::createSection($prefix, array(
+        'parent' => 'page_introduce', // The slug id of the parent section
+        'title' => 'Giới thiệu Block 5',
+
+        'fields' => array(
+            // Giới thiệu block 1
+           array(
+            'id' => 'page_introduce_block_5_title',
+            'type' => 'text',
+            'title' => 'Tiêu đề',
+        ),
+           array(
+            'id'            => 'page_introduce_block_5_editor',
+            'type'          => 'wp_editor',
+            'title'         => 'Nội dung block 5',
+            'tinymce'       => true,
+            'quicktags'     => true,
+            'media_buttons' => false,
+            'height'        => '100px',
+        ),
+            array(
+            'id' => 'page_introduce_block_5_image',
+            'type' => 'media',
+            'title' => 'Hình ảnh mô tả',
+            'library' => 'image',
+            'preview_size' => 'full',
+            'url' => false
+        ),
+
+       ),
+    ));
+    /*End Page Gioi Thieu*/
 }
