@@ -101,7 +101,7 @@ get_header();
                              </div>
                         </div>
                          <div class="col-md-6">
-                            <?php moc_le_gia_post_thumbnail(); ?>
+                            <?php echo get_field('add_google_map'); ?>
                         </div>
                     </div>
                 </div>
