@@ -306,7 +306,19 @@ if (class_exists('CSF')) {
 
         )
     ));
-
+     /*Contact form*/
+     CSF::createSection($prefix, array(
+        'id' => 'contact-form', // Set a unique slug-like ID
+        'title' => 'Form liên Hệ',
+        'fields' => array(
+            array(
+                'id' => 'contact-form-1',
+                'type' => 'text',
+                'title' => 'Thêm short code contact Form',
+            ),
+        )
+    ));
+    /*end Contact form*/
     /**================Footer Options================*/
     // Create a top-tab
     CSF::createSection($prefix, array(
