@@ -162,3 +162,26 @@ $('.box_item_child .title').click(function () {
         $(this).closest('.box_item_child').addClass('active');
     }
 })
+
+$('.show-room__slider').owlCarousel({
+    responsive: {
+        0: {
+            items: 1
+        },
+        576: {
+            items: 3
+        },
+        768: {
+            items: 5
+        },
+    },
+    margin: 25,
+    padding: 20,
+    smartSpeed: 450,
+    autoHeight: true,
+    loop: true,
+    autoplay: false,
+    nav: true,
+    dots: false,
+    navText: ["<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/next_banner.png'>"]
+});
