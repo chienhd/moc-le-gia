@@ -99,6 +99,7 @@ foreach (wc_get_products($query_args) as $product) {
                                 <a href="<?php echo esc_url(get_permalink()) ?>"
                                    title="<?php echo get_the_title(); ?>">
                                   <?php echo get_the_title(); ?>
+                                  <span><?php echo get_field('add_product_brand_with_title'); ?></span>
                                 </a>
                               </div>
                             </div>

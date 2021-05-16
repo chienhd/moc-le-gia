@@ -45,7 +45,9 @@ $category = get_queried_object();
     <div class="container">
         <section class="category__title-section">
             <h1 class="title-header"><?php echo $category->name; ?></h1>
-            <div class="mota_title"><p><?php echo $category->description; ?></p></div>
+            <div class="mota_title">
+              <?php echo get_field('add_description_category_product',  $category->taxonomy. '_' . $category->term_id); ?>
+          </div>
         </section>
     </div>
 
@@ -83,7 +85,7 @@ $category = get_queried_object();
   ?>
 
   <?php
-  $description = get_field('description-product-category-bottom', $category->taxonomy . '_' . $category->term_id);
+  $description = get_field('add_description_product_category_bottom', $category->taxonomy . '_' . $category->term_id);
   if (!empty($description)) {
     ?>
       <div class="container">
