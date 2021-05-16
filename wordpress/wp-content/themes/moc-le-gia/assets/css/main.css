@@ -66,6 +66,7 @@ body {
     font-weight: 400;
     background: #fff;
     color: #666;
+    margin-bottom: 0;
 }
 
 #page {
@@ -456,26 +457,35 @@ body {
     margin-right: auto;
     display: block;
     position: relative;
-    max-height: 700px;
     width: 100%;
     max-width: 1920px;
     overflow: hidden;
+    height: 0;
+    padding-bottom: 36.5%;
 }
 
 .primary-carousel .owl-item.active {
-    max-height: 700px;
+    height: 100%
     width: 100% !important;
     max-width: 1920px;
 }
 
 .primary-carousel .owl-item .item {
-    max-height: 700px;
+    height: 0;
+    padding-bottom: 36.5%;
+    position: relative;
     width: 100%;
     overflow: hidden;
 }
 
 .primary-carousel .owl-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
+    height: 100%;
     display: block;
     margin: auto;
     object-fit: cover;
@@ -522,6 +532,15 @@ body {
     right: 15px;
 }
 
+@media(max-height: 991.98px) {
+    .primary-carousel,
+    .primary-carousel .owl-item .item {
+        padding-bottom: 42%;
+    }
+    .primary-carousel .owl-dots {
+        bottom: 10px;
+    }
+}
 
 /*------------------------------------------------------End Home Carousel----------------------------------------------*/
 

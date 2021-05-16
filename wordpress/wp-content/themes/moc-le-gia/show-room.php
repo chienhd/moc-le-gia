@@ -14,69 +14,7 @@
 
 get_header();
 ?>
-<style type="text/css">
-      .category-banner {
-            height: auto;
-            padding-bottom: 36%;
-            overflow: hidden;
-            position: relative;
-        }
 
-        .category-banner .img-banner {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            object-fit: cover;
-        }
-        .show-room-content {
-            padding-top: 35px;
-        }
-        .show-room__title {
-            margin-top: 0;
-            font-size: 24px;
-            color: #182633;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-        .show-room__content ul {
-            padding-left: 15px;
-        }
-        .show-room__content ul li {
-            list-style-type: initial;
-            color: #182633;
-            font-size: 15px;
-            margin-bottom: 5px;
-        }
-        p {
-            margin: 0 0 10px;
-        }
-        #show-room__slider {
-            margin-top: 30px;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            background: #222222;
-        }
-        .show-room__slider .owl-nav button {
-            height: 33px;
-            overflow: hidden;
-        }
-        .show-room__slider .owl-item,
-        .show-room__slider .owl-item .item {
-            height: 300px;
-        }
-        .show-room__slider .owl-item img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-</style>
 <main id="show-room" class="site-show-room">
     <div class="wrap-category-banner">
         <div class="category-banner">
@@ -139,3 +77,67 @@ get_header();
 
 <?php
 get_footer();
+?>
+<style type="text/css">
+   .category-banner {
+        height: auto;
+        padding-bottom: 36%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .category-banner .img-banner {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        object-fit: cover;
+    }
+    .show-room-content {
+        padding-top: 35px;
+    }
+    .show-room__title {
+        margin-top: 0;
+        font-size: 24px;
+        color: #182633;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    .show-room__content ul {
+        padding-left: 15px;
+    }
+    .show-room__content ul li {
+        list-style-type: initial;
+        color: #182633;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    p {
+        margin: 0 0 10px;
+    }
+    #show-room__slider {
+        margin-top: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background: #222222;
+    }
+    .show-room__slider .owl-nav button {
+        height: 33px;
+        overflow: hidden;
+    }
+    .show-room__slider .owl-item,
+    .show-room__slider .owl-item .item {
+        height: 300px;
+    }
+    .show-room__slider .owl-item img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>

@@ -1,3 +1,212 @@
+
+// $query_args = array(
+//     'status'    => 'publish',
+//     'limit'     => -1,
+//     'category'  => array( $category->slug ),
+// );
+
+// $data = array();
+// foreach( wc_get_products($query_args) as $product ){
+//     foreach( $product->get_attributes() as $taxonomy => $attribute ){
+
+//         $attribute_name = wc_attribute_label( $taxonomy ); // Attribute name
+//         $data[$taxonomy]['taxonomy'] = $attribute_name;
+
+//         // Or: $attribute_name = get_taxonomy( $taxonomy )->labels->singular_name;
+//         if($attribute->get_terms()) {
+//             foreach ( $attribute->get_terms() as $term ){
+//                     //$data[$taxonomy][$term->term_id] = $term;
+//                 // Or with the product attribute label name instead:
+//                 if($term->count) {
+//                     $data[$taxonomy]['term'] = array(
+//                         $term->slug => $term->name
+//                     );
+//                 }
+                
+//             }
+//         }
+//     }
+// }
+
+// echo '<pre>';
+// print_r($data); die;
+
+
+// $args = array(
+//     'category'  => array( 'sofa' )
+//     // or 'term_taxonomy_id' => 4 i.e. category ID
+// );
+
+// foreach( wc_get_products($args) as $product ){
+
+//     foreach( $product->get_attributes() as $attr_name => $attr ){
+
+//         echo wc_attribute_label( $attr_name ); // attr label
+//         // or get_taxonomy( $attr_name )->labels->singular_name;
+
+//         foreach( $attr->get_terms() as $term ){
+
+//             //echo $term->name;
+//         }
+//     }
+// }
+
+
+    // Define Query Arguments
+//     $args = array( 
+//                 'post_type'             => 'product',
+//                 'post_status'           => 'publish',
+//                 'ignore_sticky_posts'   => 1,
+//                 'category'  => array( $category->slug ),
+//                 'tax_query'             => array(
+//                     array(
+//                         'taxonomy'      => 'pa_demo-thuong-hieu',
+//                         'terms'         => 'milanodesign',
+//                         'field'         => 'slug',
+//                     )
+//                 )
+//             );
+    
+//     ob_start();
+    
+//     $query = new WP_Query( $args );
+
+//     if ($query->have_posts()) {
+//                         while ($query->have_posts()) {
+//                             $query->the_post();
+//                             get_template_part('template-parts/category', 'product');
+//                         }
+//                     }
+
+// // TEST: Output the Products IDs
+// print_r($query->have_posts()); die;
+
+<?php
+    $category = get_queried_object();
+    $query_args = array(
+        'post_type' => 'product',
+        'status'    => 'publish',
+        'limit'     => -1,
+        'category'  => array( $category->slug ),
+    );
+
+    $variable = array();
+    foreach( wc_get_products($query_args) as $product ){
+        foreach( $product->get_attributes() as $taxonomy => $attribute ){
+            $attribute_name = wc_attribute_label( $taxonomy ); // Attribute name
+            $variable[$taxonomy]['taxonomy'] = $attribute_name;
+
+            if($attribute->get_terms()) {
+                foreach ( $attribute->get_terms() as $term ){
+                    if($term->count) {
+                        $variable[$taxonomy]['term'] = array(
+                            $term->slug => $term->name
+                        );
+                        ?>
+                        <?php
+                    }
+                    
+                }
+            }
+        }
+    }
+?>
+
+
+<?php die; ?>
+<div class="container">
+    <div class="list_product_cat">
+    <?php
+    $i = 0;
+    foreach ($variable as $taxonomy => $value) {
+        if(!isset($value['term'])) {
+            continue;
+        }
+    ?>
+        <div class="box_item <?php if($i == 0) { echo 'active'; } ?>">
+            <div class="content_item">
+                <!-- Big title -->
+                <div class="title_widget">
+                    <div class="post-list_h">
+                        <div class="name-cts"><span><?php echo $value['taxonomy']; ?></span><i class="fa fa-minus-square-o"></i></div>
+                    </div>
+                </div>
+
+                <div class="content_box">
+
+                    <div class="box_item_child">
+                        <div class="content_item_child">
+                            <?php
+                            foreach ($value['term'] as $term_slug => $term) {                           
+                            ?>
+                            <!-- sub title -->
+                            <div class="title">
+                                <div class="name-cts"><?php echo $term; ?></div>
+                            </div>
+
+                            <div class="row list_post_category">
+                                <?php
+                                $args = array( 
+                                    'post_type'             => 'product',
+                                    'post_status'           => 'publish',
+                                    'ignore_sticky_posts'   => 1,
+                                    'category'  => array( $category->slug ),
+                                    'tax_query'             => array(
+                                        array(
+                                            'taxonomy'      => $taxonomy,
+                                            'terms'         => $term_slug,
+                                            'field'         => 'slug',
+                                        )
+                                    )
+                                );
+                                $query = new WP_Query( $args );
+
+                                if ($query->have_posts()) {
+                                    while ($query->have_posts()) {
+                                ?>
+                                <div class="col-xs-12 col-sm-6 col-md-4 post_wrapper" data-post-item="1">
+                                    <div class="content_item">
+                                        <figure class="featured-thumbnail thumbnail ">
+                                            <a href="<?php echo esc_url(get_permalink()) ?>" title="<?php echo get_the_title(); ?>">
+                                                <img alt="<?php echo get_the_title(); ?>"
+                                                    class="lazyload ls-is-cached lazyloaded"
+                                                    src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'post-thumbnails'); ?>">
+                                            </a>
+                                        </figure>
+                                        <div class="post_content">
+                                            <div class="post-title">
+                                                <a href="<?php echo esc_url(get_permalink()) ?>"
+                                                   title="<?php echo get_the_title(); ?>">
+                                                   <?php echo get_the_title(); ?>
+                                                   <span>Chateau d'Ax </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               <?php
+                                    }
+                                }
+                               ?>
+                            </div>
+                            <?php
+                            }
+                            ?>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <?php
+        }
+        ?>
+    </div>
+</div>
 <style type="text/css">
     .box_item {
         margin-top: 30px;
@@ -124,6 +333,7 @@
 
 <div class="container">
     <div class="list_product_cat">
+        
         <div class="box_item active">
             <div class="content_item">
                 <div class="title_widget">

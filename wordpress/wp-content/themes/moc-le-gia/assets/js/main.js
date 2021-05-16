@@ -37,9 +37,12 @@ $('.primary-carousel').owlCarousel({
     smartSpeed: 450,
     autoHeight: false,
     loop: true,
-    autoplay: true,
+    autoplay: false,
     nav: true,
-    navText: ["<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/next_banner.png'>"]
+    navText: [
+        "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", 
+        "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/next_banner.png'>"
+    ]
 });
 
 
@@ -60,7 +63,10 @@ $('.home-carousel-news').owlCarousel({
     autoplay: false,
     nav: true,
     dots: false,
-    navText: ["<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/next_banner.png'>"]
+    navText: [
+        "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", 
+        "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/next_banner.png'>"
+    ]
 });
 
 $('.home-video__top_start-video').click(function () {
@@ -94,7 +100,10 @@ $('.home-carousel-client').owlCarousel({
     autoplay: false,
     nav: true,
     dots: false,
-    navText: ["<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/next_banner.png'>"]
+    navText: [
+        "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", 
+        "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/next_banner.png'>"
+    ]
 });
 
 $('.home-partner-carousel').owlCarousel({
@@ -183,5 +192,35 @@ $('.show-room__slider').owlCarousel({
     autoplay: false,
     nav: true,
     dots: false,
-    navText: ["<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/next_banner.png'>"]
+    navText: [
+        "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", 
+        "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/next_banner.png'>"
+    ]
+});
+
+
+$('.slide_camnhan').owlCarousel({
+    responsive: {
+        0: {
+            items: 1
+        },
+        576: {
+            items: 3
+        },
+        768: {
+            items: 3
+        },
+    },
+    margin: 20,
+    padding: 20,
+    smartSpeed: 450,
+    autoHeight: true,
+    loop: true,
+    autoplay: false,
+    nav: true,
+    dots: false,
+    navText: [
+        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+        '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+    ]
 });
