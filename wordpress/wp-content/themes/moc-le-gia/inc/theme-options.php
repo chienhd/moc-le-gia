@@ -23,7 +23,7 @@ if (class_exists('CSF')) {
                 'title' => 'Logo',
                 'library' => 'image',
                 'preview_size' => 'full',
-                'url' => false,
+                'url' => true,
             ),
 
         )
@@ -201,13 +201,9 @@ if (class_exists('CSF')) {
                     ),
                     array(
                         'id'    => 'iframe',
-                        'type'  => 'code_editor',
-                        'title'   => 'video (iframe)',
-                        'sanitize' => false,
-                        'settings' => array(
-                              'theme' => 'shadowfox',
-                              'mode' => 'htmlmixed',
-                        ),
+                        'type'  => 'text',
+                        'title'   => 'link video youtube',
+                        'defaul' => 'https://www.youtube.com/embed/7ZMF66BFCsQ'
                       ),
                 ),
             ),

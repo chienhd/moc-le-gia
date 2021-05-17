@@ -15,8 +15,9 @@
 			if($query->have_posts()) {
 		 ?>
 	    <div class="home-carousel-news owl-carousel owl-theme">
-	    	<?php 
-	    		while ($query->have_posts()) {
+	    	<?php
+	    	$i = 1;
+	    		while ($query->have_posts() && $i <= 3) {
                     $query->the_post();
 	    	?>
 	        <div class="item">
@@ -30,7 +31,10 @@
 	        		</div>
 	        	</div>
 	        </div>
-	    	<?php } ?>
+	    	<?php
+	    	$i++;
+	    		} 
+	    	?>
 	    </div>
 
 	    <?php 

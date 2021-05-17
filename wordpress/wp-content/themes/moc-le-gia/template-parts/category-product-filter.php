@@ -31,22 +31,19 @@ foreach (wc_get_products($query_args) as $product) {
 <div class="container">
   <div class="list_product_cat">
     <?php
-    $i = 0;
     foreach ($variable as $taxonomy => $value) {
       if (!isset($value['term'])) {
         continue;
       }
       ?>
-      <div class="box_item <?php if ($i == 0) {
-        echo 'active';
-      } ?>">
+      <div class="box_item">
         <div class="content_item">
           <!-- Big title -->
           <div class="title_widget">
             <div class="post-list_h">
               <div class="name-cts"><span><?php echo $value['taxonomy']; ?></span>
-                <i class="fa fa-plus-square-o" style="<?php if($i == 0) { echo 'display: none'; } ?>"></i>
-                <i class="fa fa-minus-square-o" style="<?php if($i == 0) { echo 'display: block'; } else { echo 'display: none'; } ?>"></i>
+                <i class="fa fa-plus-square-o"></i>
+                <i class="fa fa-minus-square-o" style="display: none"></i>
               </div>
             </div>
           </div>
@@ -120,8 +117,7 @@ foreach (wc_get_products($query_args) as $product) {
         </div>
       </div>
       <?php
-      $i++;
-    }
+      }
     ?>
   </div>
 </div>
@@ -164,7 +160,7 @@ foreach (wc_get_products($query_args) as $product) {
     font-size: 20px;
   }
 
-  .tax-product_cat .box_item.active .content_box, .box_item_child.active .list_post_category {
+  .list_product_cat .box_item.active .content_box, .box_item_child.active .list_post_category {
     display: block;
     margin-bottom: 30px;
   }
@@ -185,7 +181,7 @@ foreach (wc_get_products($query_args) as $product) {
     text-transform: uppercase;
   }
 
-  .tax-product_cat .box_item .content_box, .box_item_child .list_post_category {
+  .list_product_cat .box_item .content_box, .box_item_child .list_post_category {
     display: none;
   }
 

@@ -35,7 +35,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a id="logo" class="navbar-brand" href="/"><img src="<?php echo prefix_get_option('opt-media-logo')['url']; ?>" alt="Logo"></a>
+                    <a id="logo" class="navbar-brand" href="/"><img src="<?php if(prefix_get_option('opt-media-logo')) { echo prefix_get_option('opt-media-logo')['url']; } ?>" alt="Logo"></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->

@@ -104,7 +104,9 @@ body {
 }
 
 #logo > img {
-    margin-top: 5px;
+    /*margin-top: 5px;*/
+    width: 120px;
+    height: 77px;
 }
 
 #bs-primary-navbar-collapse {

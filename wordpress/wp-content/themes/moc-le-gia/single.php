@@ -57,8 +57,13 @@ get_header();
             <div class="bienthe">
                 <div class="row">
                     <div class="col col-md-5 col-12">
+                        <?php
+                        $price = $product->get_price();
+                        if($price) {
+                        ?>
                         <div class="title"><span>Giá bán</span></div>
-                        <span class="amount"><bdi><?php echo number_format($product->get_price(), 2, ".", ","); ?>&nbsp;<span class="">₫</span></bdi></span>                
+                        <span class="amount"><bdi><?php echo number_format($price, 2, ".", ","); ?>&nbsp;<span class="">₫</span></bdi></span>
+                        <?php } ?>            
                         <div class="mgg">
                             <?php echo get_field('add_description_price'); ?>
                         </div>

@@ -86,6 +86,33 @@
 	    border-radius: 0;
 	    background: none;
 	}
+	.home-interior-knowledge .content_item .thumbnail > a {
+		margin: 0px 0px 0px 0px;
+	    border: none;
+	    border-radius: 0;
+	    background: none;
+	    height: 0;
+	    display: block;
+	    padding-top: 0;
+	    padding-left: 0;
+	    padding-right: 0;
+	    padding-bottom: 66.7%;
+	    position: relative;
+	    overflow: hidden;
+	}
+	.home-interior-knowledge .content_item .thumbnail > a > img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
 	.home-interior-knowledge .content_item .post_meta {
 		margin: 10px 0px;
 	}
