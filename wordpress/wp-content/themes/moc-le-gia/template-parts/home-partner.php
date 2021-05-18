@@ -24,7 +24,7 @@
 
 <style type="text/css">
 	.home-partner {
-		background: #0e0e0e;
+		background: #100000;
 		padding-bottom: 60px;
 		padding-top: 60px;
 	}
@@ -56,6 +56,9 @@
 	    height: 1px;
 	    background: #edc14f;
 	    margin: 0 auto;
+	}
+	.home-partner .owl-carousel .owl-item img {
+		height: auto;
 	}
 	   
 

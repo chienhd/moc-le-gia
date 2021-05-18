@@ -115,10 +115,10 @@ $('.home-partner-carousel').owlCarousel({
             items: 5,
         }
     },
-    margin: 20,
+    margin: 15,
     padding: 20,
     smartSpeed: 450,
-    autoHeight: false,
+    autoHeight: true,
     loop: true,
     autoplay: false,
     nav: false,

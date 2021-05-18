@@ -43,7 +43,7 @@
 
 <style type="text/css">
 	.home-interior-knowledge {
-		background: #0e0e0e;
+		background: #100000;
 		padding-top: 60px;
 	}
 	.home-interior-knowledge .wrap-title {

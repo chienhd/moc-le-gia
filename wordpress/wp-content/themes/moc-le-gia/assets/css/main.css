@@ -76,7 +76,7 @@ body {
 /*----------------------------------------------------------Header----------------------------------------------------*/
 
 .site-header {
-    background: rgba(30, 30, 29, 0.8);
+    background: #100000;
     position: fixed;
     top: 0;
     left: 0;
@@ -105,8 +105,8 @@ body {
 
 #logo > img {
     /*margin-top: 5px;*/
-    width: 120px;
-    height: 77px;
+    width: 88px;
+    height: 50px;
 }
 
 #bs-primary-navbar-collapse {
@@ -463,7 +463,7 @@ body {
     max-width: 1920px;
     overflow: hidden;
     height: 0;
-    padding-bottom: 36.5%;
+    padding-bottom: 46%;
 }
 
 .primary-carousel .owl-item.active {
@@ -474,7 +474,7 @@ body {
 
 .primary-carousel .owl-item .item {
     height: 0;
-    padding-bottom: 36.5%;
+    padding-bottom: 46%;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -514,8 +514,8 @@ body {
 }
 
 .primary-carousel .owl-prev, .primary-carousel .owl-next {
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -534,7 +534,7 @@ body {
     right: 15px;
 }
 
-@media(max-height: 991.98px) {
+@media(max-width: 991.98px) {
     .primary-carousel,
     .primary-carousel .owl-item .item {
         padding-bottom: 42%;
@@ -616,7 +616,7 @@ body {
 /*--------------------------------------------3. Bộ sưu tập nội thất - Mộc Lê Gia--------------------------------------*/
 .home-collect {
     padding: 60px 0px;
-    background: #222222;
+    background: #100000;
 }
 .wrap-h1-title {
     display: block;
@@ -658,10 +658,16 @@ body {
 }
 .home-collect__description, .home-collect__description p {
     position: relative;
-    width: 100%;
+    width: max-content;
     min-height: 23px;
     text-align: center;
+    max-width: 100%;
     color: #fff;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 .home-collect__description::before {
     content: url(/wp-content/themes/moc-le-gia/assets/images/icon/icon_start.png);
@@ -966,7 +972,7 @@ body {
 
 /*--------------------------------------------5. Tin tức---------------------------------------------------------------*/
 .wrap-home-carousel-news {
-    background: #222222;
+    background: #100000;
     padding: 60px 0;
 }
 .wrap-home-carousel-news  .wrap-title {
@@ -1093,7 +1099,7 @@ body {
 
 /*--------------------------------------------6. Home Video -----------------------------------------------------------*/
 .wrap-home-videos {
-    background: #222222;
+    background: #100000;
     position: relative;
 }
 .wrap-home-videos .wrap-title {
@@ -1222,7 +1228,7 @@ body {
 .wrap-home-client {
     padding-top: 60px;
     padding-bottom: 60px;
-    background: #222222;
+    background: #100000;
     position: relative;
 }
 .wrap-home-client .wrap-title {
@@ -1479,7 +1485,7 @@ div.wpcf7 .screen-reader-response {
 
 /*========================================Footer========================================*/
 footer {
-    background-color: #040404;
+    background-color: #100000;
     color: #999;
     font-size: 14px;
     padding-top: 20px;
