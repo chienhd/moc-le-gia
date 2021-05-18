@@ -164,7 +164,7 @@ body {
 }
 
 #primary-menu > .menu-item:hover > a {
-    color: #edc14f !important;
+    color: #ddd !important;
 }
 
 #primary-menu > .menu-item:hover > .sub-menu {
@@ -291,7 +291,7 @@ body {
         bottom: 0;
         width: 260px;
         overflow-y: auto;
-        border-right: 1px solid #edc14f;
+        border-right: 1px solid #ddd;
         background-color: #222222;
         overflow-x: hidden;
         -webkit-transition: -webkit-transform .3s ease;
@@ -329,16 +329,19 @@ body {
     #primary-menu li a:hover {
         text-decoration: none;
         background: #3d3d3d;
-        color: #edc14f !important;
+        color: #ddd !important;
     }
 
     #primary-menu > .menu-item {
-        border-bottom: 1px solid #edc14f;
+        border-bottom: 1px solid #ddd;
+    }
+    #primary-menu li .sub-menu li:hover > a {
+        color: #ddd;
     }
 
     #primary-menu > .menu-item > a {
         padding: 14px 10px;
-        color: #edc14f;
+        color: #ddd;
         text-transform: uppercase;
         font-size: 14px;
         font-weight: 400;
@@ -350,7 +353,7 @@ body {
 
     #primary-menu .sub-menu li a {
         padding: 14px 10px 14px 20px;
-        color: #edc14f;
+        color: #ddd;
         text-transform: uppercase;
         font-size: 14px;
         font-weight: 400;
@@ -406,11 +409,11 @@ body {
         right: 0;
         z-index: 1;
         cursor: pointer;
-        color: #edc14f !important;
+        color: #ddd !important;
     }
 
     ul.sub-menu.sub-menu-active li {
-        border-top: 1px solid #edc14f;
+        border-top: 1px solid #ddd;
     }
 
     .ul.sub-menu.sub-menu-active .ul.sub-menu.sub-menu-active {
@@ -448,6 +451,9 @@ body {
 @media (max-width: 767.98px) {
     .site-header-navbar .navbar-header {
         margin: 0;
+    }
+    #bs-primary-navbar-collapse {
+        left: 15px;
     }
 }
 
