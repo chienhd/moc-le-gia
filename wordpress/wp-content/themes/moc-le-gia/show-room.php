@@ -70,6 +70,7 @@ get_header();
 
 
     <?php 
+        get_template_part('template-parts/home', 'interior-knowledge');
         get_template_part('template-parts/home', 'partner');
         get_template_part('template-parts/home', 'contact-form');
     ?>

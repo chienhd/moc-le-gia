@@ -33,6 +33,7 @@ get_header();
             margin: auto;
             object-fit: cover;
         }
+
         #policy h1 {
 		    font-size: 24px;
 		    padding-bottom: 10px;
@@ -63,6 +64,11 @@ get_header();
 		#single-content {
 			margin-bottom: 25px;
 			color: #666;
+		}
+		@media(max-width: 991.98px) {
+			 .category-banner {
+			 	margin-top: 60px;
+			 }
 		}
 </style>
 	<main id="policy" class="page-body-content">
@@ -121,8 +127,9 @@ get_header();
 		?>
 
 		<?php
-			get_template_part('template-parts/home', 'partner');
-        	get_template_part('template-parts/home', 'contact-form');
+			get_template_part('template-parts/home', 'interior-knowledge');
+            get_template_part('template-parts/home', 'partner');
+            get_template_part('template-parts/home', 'contact-form');
 		 ?>
 	</main><!-- #main -->
 

@@ -1,7 +1,7 @@
-<div class="col-xs-12 col-sm-3">
+<div class="col-xs-12">
     <div class="related-post">
-        <div class="title"><span>Tin tức bạn quan tâm</span></div>
-        <ul class="row">
+        <div class="title"><span>CÓ THỂ BẠN QUAN TÂM</span></div>
+        <div class="row">
             <?php
                 $post_id = get_the_ID();
                 $current_post_type = get_post_type($post_id);
@@ -12,7 +12,7 @@
                         'category__in' => $cat_id,
                         'post_type' => $current_post_type,
                         'post__not_in' => array($post_id),
-                        'posts_per_page' => '4',
+                        'posts_per_page' => '6',
                     );
 
                     $related_cats_post = new WP_Query($query_args);
@@ -20,7 +20,7 @@
                     while ($related_cats_post->have_posts()) :
                         $related_cats_post->the_post();
             ?>
-            <li class="col-xs-6 col-sm-12 col-md-12 related-post__wrap">
+            <div class="col-md-4 col-xs-6 related-post__wrap">
                 <figure class="featured-thumbnail thumbnail">
                     <a rel="nofollow" href="<?php echo get_the_permalink(); ?>">
                         <img loading="lazy"
@@ -33,7 +33,7 @@
                     <a rel="nofollow" href="<?php echo get_the_permalink(); ?>"
                        title="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></a>
                 </div>
-            </li>
+            </div>
 
             <?php
                         $i++;
@@ -42,6 +42,6 @@
                 endif
                 ?>
 
-        </ul>
+        </div>
     </div>
 </div>

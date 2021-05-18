@@ -98,6 +98,7 @@ $category = get_queried_object();
   <?php } ?>
 
   <?php
+  get_template_part('template-parts/home', 'interior-knowledge');
   get_template_part('template-parts/home', 'partner');
   get_template_part('template-parts/home', 'contact-form');
   ?>
@@ -111,8 +112,14 @@ get_footer();
       padding-bottom: 36%;
       overflow: hidden;
       position: relative;
+      margin-top: 60px;
   }
 
+  @media(max-width: 991.98px) {
+      .category-banner {
+        margin-top: 60px;
+      }
+  }
   .category-banner .img-banner {
       height: 100%;
       width: 100%;

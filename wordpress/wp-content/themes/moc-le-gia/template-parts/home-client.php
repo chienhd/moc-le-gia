@@ -12,7 +12,7 @@
 	        		<img src="<?php echo $value['image']['thumbnail']; ?>" alt="<?php echo $value['image']['title']; ?>">
 	        	</div>
 	        	<div class="testimonial_detail">
-	        		<a href="" class="home-client__link-title"><?php echo $value['name']; ?></a>
+	        		<a href="<?php echo $value['link']; ?>" class="home-client__link-title"><?php echo $value['name']; ?></a>
 	        		<div class="home-client__exceprt">
 	        			<?php echo $value['desc']; ?>                                         
 	        		</div>
@@ -22,61 +22,16 @@
 	        		}
 	        	}
 	        ?>
-	        <!-- <div class="home-client__item">
-	        	<div class="home-client__preview">
-	        		<img src="https://noithatkenli.vn/wp-content/uploads/2019/07/64704664_213663289599026_5205723640921849856_n-1-300x300.jpg" alt="">
-	        	</div>
-	        	<div class="testimonial_detail">
-	        		<a href="" class="home-client__link-title">Ca Sĩ Tùng Dương</a>
-	        		<div class="home-client__exceprt">
-	        			Qua trải nghiệm Dương hoàn toàn tin tưởng vào tính năng, chất lượng của sản phẩm cao cấp từ Kenli. Các sản phẩm của Kenli không chỉ được nghiên cứu...                                           
-	        		</div>
-	        	</div>
-	        </div>
-			<div class="home-client__item">
-	        	<div class="home-client__preview">
-	        		<img src="https://noithatkenli.vn/wp-content/uploads/2019/07/64688512_10156929759307605_5986123764155285504_n-1-300x300.jpg" alt="">
-	        	</div>
-	        	<div class="testimonial_detail">
-	        		<a href="" class="home-client__link-title">Ca Sĩ Tùng Dương</a>
-	        		<div class="home-client__exceprt">
-	        			Qua trải nghiệm Dương hoàn toàn tin tưởng vào tính năng, chất lượng của sản phẩm cao cấp từ Kenli. Các sản phẩm của Kenli không chỉ được nghiên cứu...                                           
-	        		</div>
-	        	</div>
-	        </div>
-	        <div class="home-client__item">
-	        	<div class="home-client__preview">
-	        		<img src="https://noithatkenli.vn/wp-content/uploads/2019/07/anh-h%E1%BA%A3i-2-1-300x300.jpg" alt="">
-	        	</div>
-	        	<div class="testimonial_detail">
-	        		<a href="" class="home-client__link-title">Ca Sĩ Tùng Dương</a>
-	        		<div class="home-client__exceprt">
-	        			Qua trải nghiệm Dương hoàn toàn tin tưởng vào tính năng, chất lượng của sản phẩm cao cấp từ Kenli. Các sản phẩm của Kenli không chỉ được nghiên cứu...                                           
-	        		</div>
-	        	</div>
-	        </div>
-	        <div class="home-client__item">
-	        	<div class="home-client__preview">
-	        		<img src="https://noithatkenli.vn/wp-content/uploads/2019/07/64704664_213663289599026_5205723640921849856_n-1-300x300.jpg" alt="">
-	        	</div>
-	        	<div class="testimonial_detail">
-	        		<a href="" class="home-client__link-title">Ca Sĩ Tùng Dương</a>
-	        		<div class="home-client__exceprt">
-	        			Qua trải nghiệm Dương hoàn toàn tin tưởng vào tính năng, chất lượng của sản phẩm cao cấp từ Kenli. Các sản phẩm của Kenli không chỉ được nghiên cứu...                                           
-	        		</div>
-	        	</div>
-	        </div>
-			<div class="home-client__item">
-	        	<div class="home-client__preview">
-	        		<img src="https://noithatkenli.vn/wp-content/uploads/2019/07/64688512_10156929759307605_5986123764155285504_n-1-300x300.jpg" alt="">
-	        	</div>
-	        	<div class="testimonial_detail">
-	        		<a href="" class="home-client__link-title">Ca Sĩ Tùng Dương</a>
-	        		<div class="home-client__exceprt">
-	        			Qua trải nghiệm Dương hoàn toàn tin tưởng vào tính năng, chất lượng của sản phẩm cao cấp từ Kenli. Các sản phẩm của Kenli không chỉ được nghiên cứu...                                           
-	        		</div>
-	        	</div>
-	        </div> -->
 	    </div>
 	</div>
 </div>
+
+<style type="text/css">
+	.home-carousel-client .owl-nav {
+		display: block !important;
+	}
+	.home-carousel-client .owl-nav button {
+		width: 33px;
+		height: 33px;
+	}
+</style>

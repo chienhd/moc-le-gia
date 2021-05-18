@@ -60,6 +60,7 @@ $cat_id = $cat->cat_ID;
         </div>
 
         <?php
+        get_template_part('template-parts/home', 'interior-knowledge');
         get_template_part('template-parts/home', 'partner');
         get_template_part('template-parts/home', 'contact-form');
         ?>
@@ -75,8 +76,13 @@ get_footer();
         padding-bottom: 36%;
         overflow: hidden;
         position: relative;
+        margin-top: 60px;
     }
-
+    @media(max-width: 991.98px) {
+         .category-banner {
+            margin-top: 60px;
+         }
+    }
     .category-banner .img-banner {
         height: 100%;
         width: 100%;
@@ -161,7 +167,7 @@ get_footer();
         font-weight: 600;
         font-size: 16px;
     }
-
+    .cate-news__content:hover a,
     .cate-news__content .post-title a:hover {
         color: #edc14f !important;
     }

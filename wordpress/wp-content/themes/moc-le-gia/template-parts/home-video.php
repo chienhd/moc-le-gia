@@ -27,8 +27,17 @@
                     }
                 }
             ?>
-           
+            <div class="col-xs-12" align="center"><a href="<?php echo prefix_get_option('home-video-readmore'); ?>" class="btn btn-default home-video__readmore">Xem thêm các video</a></div>
         </div>
         <div class="border"></div>
     </div>
 </section>
+
+<style type="text/css">
+    .home-video__readmore {
+        background-color: transparent;
+        font-size: 16px;
+        color: #fff;
+        margin-top: 15px;
+    }
+</style>

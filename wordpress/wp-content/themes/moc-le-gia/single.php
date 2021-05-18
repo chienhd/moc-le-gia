@@ -246,7 +246,7 @@ get_header();
                         'post_type' => 'product',
                         'post_status' => 'publish',
                         'post__not_in' => array($post_id),
-                        'posts_per_page' => '4',
+                        'posts_per_page' => '8',
                     );
 
                     $related_cats_post = new WP_Query($query_args);
@@ -262,10 +262,13 @@ get_header();
                             </a>
                         </figure>
                         <div class="content">
-                            <a href="<?php echo esc_url(get_permalink()) ?>" rel="nofollow" title="<?php echo get_the_title(); ?>" tabindex="0"><?php echo get_the_title(); ?></a>
-                            <div class="excerpt">
-                                <?php echo get_the_excerpt(); ?>                                                
-                            </div>
+                            <a href="<?php echo esc_url(get_permalink()) ?>" rel="nofollow" title="<?php echo get_the_title(); ?>" tabindex="0">
+                                <?php echo get_the_title(); ?>
+                                <span><?php echo get_field('add_product_brand_with_title'); ?></span>
+                            </a>
+                            <!-- <div class="excerpt">
+                                <?php //echo get_the_excerpt(); ?>                                                
+                            </div> -->
                         </div>
                     </li>
                     <?php
@@ -278,6 +281,7 @@ get_header();
     </div>
 
     <?php
+    get_template_part('template-parts/home', 'interior-knowledge');
     get_template_part('template-parts/home', 'partner');
     get_template_part('template-parts/home', 'contact-form');
     ?>
@@ -636,14 +640,19 @@ get_footer();
     .sp_lienquan li .content {
         text-align: center;
         margin: 10px 0px;
+        min-height: 48px;
     }
     .sp_lienquan li a {
         font-weight: 500;
         color: #333;
         font-size: 20px;
-        font-family: Quicksand, sans-serif;
         display: block;
         width: 100%;
+    }
+    .sp_lienquan li .content a >span {
+        display: block;
+        font-size: 13.5px;
+        font-weight: 400;
     }
     .sp_lienquan li a img {
         width: 100%;
@@ -707,6 +716,11 @@ get_footer();
         bottom: 0;
         margin: auto;
         object-fit: cover;
+    }
+     @media(max-width: 991.98px) {
+          .category-banner {
+            margin-top: 60px;
+          }
     }
     .list_bienthe-top {
         background: #1e1e1d;

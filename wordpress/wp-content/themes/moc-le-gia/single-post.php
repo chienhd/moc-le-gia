@@ -29,7 +29,7 @@ get_header();
             </section>
 
             <div class="row">
-                <div class="col-xs-12 col-sm-9">
+                <div class="col-xs-12">
                     <div class="post-content">
                     	<?php
                     		echo get_the_content();
@@ -49,6 +49,7 @@ get_header();
 
     </div>
     <?php
+    get_template_part('template-parts/home', 'interior-knowledge');
     get_template_part('template-parts/home', 'partner');
     get_template_part('template-parts/home', 'contact-form');
     ?>
@@ -104,10 +105,14 @@ get_footer();
     }
 
     .related-post .title {
+        border-top: 1px solid #eee;
+        font-size: 17px;
         text-transform: uppercase;
-        margin: 40px 0 20px 0;
-        border-bottom: 1px solid #e6e6e6;
-        padding: 0 0 15px 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-top: 40px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 20px;
     }
 
     .related-post li a {
@@ -149,6 +154,18 @@ get_footer();
         padding: 0px;
         margin: 0px -10px;
     }
+     .related-post .content a {
+        color: #000;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .related-post .content {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .related-post__wrap {
+        margin-bottom: 15px;
+    }
 
     .related-post .thumbnail {
         margin: 0px 0px 0px 0px;
@@ -158,7 +175,7 @@ get_footer();
         height: 0;
         background: none;
         position: relative;
-        padding-bottom: 66.6%;
+        padding-bottom: 69.6%;
         overflow: hidden;
     }
      .related-post .thumbnail > a {
@@ -212,5 +229,11 @@ get_footer();
     }
     .single-single_readmore  a {
         color: #f9c339 !important;
+    }
+
+    @media(max-width: 991.98px) {
+          .category-banner {
+            margin-top: 60px;
+          }
     }
 </style>

@@ -163,6 +163,11 @@ get_header();
             margin-top: 30px;
         }
     }
+     @media(max-width: 991.98px) {
+          #slideshow {
+            margin-top: 60px;
+          }
+    }
     @media(max-width: 575.98px) {
         .single-banner-other-page {
             padding-bottom: 35%;
@@ -269,6 +274,7 @@ get_header();
     <?php endif; ?>
 
     <?php 
+        get_template_part('template-parts/home', 'interior-knowledge');
         get_template_part('template-parts/home', 'partner');
         get_template_part('template-parts/home', 'contact-form');
     ?>

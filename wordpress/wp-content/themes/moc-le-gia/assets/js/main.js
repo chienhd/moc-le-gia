@@ -224,3 +224,30 @@ $('.slide_camnhan').owlCarousel({
         '<i class="fa fa-angle-right" aria-hidden="true"></i>'
     ]
 });
+
+$('.home-interior-knowledge__slider').owlCarousel({
+    responsive: {
+        0: {
+            items: 1
+        },
+        576: {
+            items: 2
+        },
+        768: {
+            items: 3,
+            nav: true,
+        },
+    },
+    margin: 20,
+    padding: 20,
+    smartSpeed: 450,
+    autoHeight: true,
+    loop: true,
+    autoplay: false,
+    dots: false,
+    navText: [
+        "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", 
+        "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/next_banner.png'>"
+    ]
+});
+

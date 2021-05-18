@@ -207,6 +207,11 @@ if (class_exists('CSF')) {
                       ),
                 ),
             ),
+            array(
+                'id' => 'home-video-readmore',
+                'type' => 'text',
+                'title' => 'Xem thêm video',
+            ),
 
         )
     ));
@@ -246,6 +251,11 @@ if (class_exists('CSF')) {
                         'library' => 'image',
                         'preview_size' => 'full',
                         'url' => false,
+                    ),
+                    array(
+                        'id' => 'link',
+                        'type' => 'text',
+                        'title' => 'link',
                     ),
                    
                 ),

@@ -3,7 +3,7 @@
 		<div class="wrap-title">
 			<h2 class="h2-title"><?php echo prefix_get_option('home-knowledge-title'); ?></h2>
 		</div>
-		<div class="row">
+		<div class="home-interior-knowledge__slider owl-carousel owl-theme">
 			<?php
 			$query = new WP_Query(
                             array(
@@ -18,7 +18,7 @@
 				while ($query->have_posts()) {
                     $query->the_post();
 		 	?>
-				<div class="col-sm-4">
+				<div class="item">
 					<div class="content_item">
 					   <figure class="featured-thumbnail thumbnail">
 					      <a target="_blank" href="<?php echo esc_url(get_permalink()) ?>" rel="nofollow">
@@ -42,6 +42,32 @@
 </div>
 
 <style type="text/css">
+	.home-interior-knowledge__slider {
+		position: relative;
+	}
+	.home-interior-knowledge__slider .owl-nav {
+		margin-top: 0;
+		display: block !important;
+	}
+	.home-interior-knowledge__slider .owl-prev,
+	.home-interior-knowledge__slider .owl-next {
+	    width: 33px;
+	    height: 33px;
+	    position: absolute;
+	    top: 45%;
+	    -webkit-transform: translateY(-45%);
+	    -moz-transform: translateY(-45%);
+	    -o-transform: translateY(-45%);
+	    transform: translateY(-45%);
+	    display: block;
+	    border: 1px solid black;
+	}
+	.home-interior-knowledge__slider .owl-prev {
+		left: -45px;
+	}
+	.home-interior-knowledge__slider .owl-next {
+		right: -45px;
+	}
 	.home-interior-knowledge {
 		background: #100000;
 		padding-top: 60px;
@@ -148,6 +174,9 @@
 		}
 		.home-interior-knowledge .content_item .post_meta .excerpt {
 			text-align: center;
+		}
+		.home-interior-knowledge__slider .owl-nav {
+			display: none !important;
 		}
 	}
 

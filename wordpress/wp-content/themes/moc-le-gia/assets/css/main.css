@@ -1064,8 +1064,8 @@ body {
     -webkit-box-orient: vertical;
 }
 .home-carousel-news .owl-prev, .home-carousel-news .owl-next {
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -1383,13 +1383,14 @@ body {
 
 #home-wrap-contact-form {
     background-color: rgba(40, 39, 61, 1);
-    background-image: url(/wp-content/themes/client/assets/images/home-customer-bg.jpg);
     background-origin: content-box;
     background-size: cover;
     background-attachment: scroll;
     background-position: top left;
     background-repeat: no-repeat;
     position: relative;
+    background-attachment: fixed;
+    backface-visibility: hidden;
 }
 
 .home-contact-form-title {
