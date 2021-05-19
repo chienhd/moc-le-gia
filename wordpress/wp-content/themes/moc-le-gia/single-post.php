@@ -93,6 +93,7 @@ get_footer();
 
     .single__content .title-header {
         font-size: 35px;
+        line-height: 1.3;
         color: #000;
         font-weight: 600;
         margin-top: 20px;

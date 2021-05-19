@@ -135,7 +135,7 @@ if (class_exists('CSF')) {
                         'url' => false,
                     ),
                      array(
-                        'id' => 'link',
+                        'id' => 'desc',
                         'type' => 'text',
                         'title' => 'Mô tả ngắn',
                     ),

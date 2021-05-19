@@ -141,13 +141,17 @@ $('.product-carousel').owlCarousel({
     items: 2,
     loop: true,
     margin: 40,
-    nav: false,
+    nav: true,
     dots: false,
     responsive: {
         600: {
             items: 2
         }
-    }
+    },
+    // navText: [
+    //     "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", 
+    //     "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/next_banner.png'>"
+    // ]
 });
 
 
@@ -251,3 +255,13 @@ $('.home-interior-knowledge__slider').owlCarousel({
     ]
 });
 
+$('.download-attachment').click(function(e) {
+    e.preventDefault();  //stop the browser from following
+    var url = $(this).data('url');
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = url;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+})

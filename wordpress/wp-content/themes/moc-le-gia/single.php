@@ -44,6 +44,7 @@ get_header();
                 <?php foreach ($attachment_ids as $key => $attachment_id) { ?>
 				<div class="item">
 					<img src="<?php echo wp_get_attachment_url( $attachment_id, 'medium_large' ); ?>" alt="<?php echo wp_get_attachment_url( $attachment_id, 'medium_large' ) ?>">
+                    <div class="download-attachment" data-url="<?php echo wp_get_attachment_url( $attachment_id, 'medium_large' ); ?>"><img src="/wp-content/themes/moc-le-gia/assets/images/icon/down-white.svg"></div>
 				</div>
                 <?php } ?>
 			</div>
@@ -80,7 +81,7 @@ get_header();
 
     </div>
 
-    <div>
+    <!-- <div>
         <div class="container chitiet_sanpham ">
             <div class="chitiet_sanpham_inner">
                 <?php if($brand = get_field('add_product_brand')) { ?>
@@ -132,8 +133,8 @@ get_header();
                 <?php } ?>
             </div>
         </div>
-    </div>
-    <div>
+    </div> -->
+    <!-- <div>
        <div class="container video_sanpham">
             <div class="video_sanpham_inner">
                 <?php if($video1 = get_field('add_video_1_intro_product')) { ?>
@@ -157,7 +158,7 @@ get_header();
                 <?php } ?>
             </div>
        </div>
-    </div>
+    </div> -->
     <div class="tab_chitiet">
         <div class="container">
             <div class="bg_tap">
@@ -291,17 +292,49 @@ get_header();
 get_footer();
 ?>
 <style type="text/css">
-    .owl-carousel.owl-drag .owl-item {
+    .list_bienthe {
+        background: #f2f2f2;
+    }
+    .download-attachment {
+        position: absolute;
+        background-color: rgba(152,152,152,.8);
+        height: 47px;
+        width: 47px;
+        bottom: 10px;
+        right: 15px!important;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        opacity: 0;
+        z-index: 1;
+    }
+    
+    .download-attachment > img {
+        display: block;
+        width: auto;
+        height: 28px !important;;
+        margin-top: 12px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .product-carousel.owl-carousel.owl-theme.owl-loaded.owl-drag {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: #fff;
+    }
+    .product-carousel .owl-item {
         max-height: 650px;
         overflow: hidden;
     }
-    .owl-carousel.owl-drag .owl-item .item {
+    .product-carousel .owl-item .item {
         height: 0;
         padding-top: 70%;
         position: relative;
         overflow: hidden;
+        background-color: rgba(152,152,152,.8);
     }
-    .owl-carousel.owl-drag .owl-item .item img {
+    .product-carousel .owl-item .item img {
         position: absolute;
         top: 0;
         left: 0;
@@ -310,11 +343,66 @@ get_footer();
         margin: auto;
         display: block;
         width: 100%;
-        height: 100%;
+        height: auto;
+        opacity: 0.3;
     }
+    .product-carousel .owl-item.active.center img {
+        opacity: 1;
+    }
+    .product-carousel .owl-item.active.center:hover .download-attachment {
+        cursor: pointer;opacity: 1;
+    }
+    .product-carousel .owl-prev {
+        left: 15px;
+    }
+    .product-carousel .owl-next {
+        right: 15px;
+    }
+    .product-carousel .owl-prev span, .product-carousel .owl-next span {
+        display: none;
+    }
+    .product-carousel .owl-prev, .product-carousel .owl-next {
+        width: 33px;
+        height: 33px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        display: block;
+        border: 1px solid black;
+        background: transparent;
+    }
+    .product-carousel .owl-prev:hover,
+    .product-carousel .owl-next:hover {
+        background: transparent !important;
+    }
+    .product-carousel .owl-next::before {
+        content: "\f105" !important;
+        font: normal normal normal 14px/1 FontAwesome !important;
+        font-size: 60px !important;
+        width: 30px;
+        height: 40px;
+        display: inline-block;
+        line-height: 40px !important;
+        color: #9f0000 !important;
+    }
+    .product-carousel .owl-prev::before {
+        content: "\f104" !important;
+        font: normal normal normal 14px/1 FontAwesome !important;
+        font-size: 60px !important;
+        width: 30px;
+        height: 40px;
+        display: inline-block;
+        line-height: 40px !important;
+        color: #9f0000 !important;
+    }
+
      /* --------------------------------------------- List bien the --------------------------------------------------- */
+    }
     .list_bienthe {
-        background: #f2f2f2;
+        background: #f2f2f2 !important;
     }
     .bienthe {
         padding: 30px 0;
@@ -723,11 +811,11 @@ get_footer();
           }
     }
     .list_bienthe-top {
-        background: #1e1e1d;
+        background:  #100000;
         padding-top: 40px;
-        padding-bottom: 40px;
+        padding-bottom: 0;
     }
-    h1.title-header{font-size:35px;color:#000;font-weight:600;color:#fff;  text-align: center; margin-bottom: 15px;}
+    h1.title-header{font-size:35px;line-height:1.3;color:#000;font-weight:600;color:#fff;  text-align: center; margin-bottom: 15px;}
     h1.title-header span{display:block;text-align:center;font-size:20px;}
     .mota_title { color:#fff; }
     .so-panel{margin-bottom:0px!important;}

@@ -1,36 +1,67 @@
 <div class="wrap-home-product">
     <div class="home-product">
-        <div class="home-product-first home-product-item">
-            <img class="home-product__img" src="https://noithatkenli.vn/wp-content/uploads/2018/05/bbb-1.jpg">
-            <div class="home-product__info">
-                <a href="" class="home-product__link">Sofa da Italy</a>
-                <strong class="home-product__title">Sang trọng - Đẳng cấp</strong>
-            </div>
-        </div>  
         <div class="home-product-second">
+            <?php $product = prefix_get_option('home-product-group');
+                if($product) {
+            ?>
             <div class="home-product-second_top">
+                <?php $i = 0; foreach($product as $key => $value) { ?>
+
+                <?php if($i == 2) { ?>
+                    </div>
+                    <div class="home-product-second_bottom">
+                <?php } ?>
+                
                 <div class="home-product-second_top1 home-product-item">
-                    <img class="home-product__img" src="https://noithatkenli.vn/wp-content/uploads/2018/05/ban-ghe-ngoai-troi-1.jpg" alt="">
+                    <img class="home-product__img" src="<?php echo $value['image']['url'] ?>" alt="<?php echo $value['image']['title'] ?>">
                     <div class="home-product__info">
-                        <a href="" class="home-product__link">Bàn trà</a>
-                        <strong class="home-product__title">Phong cách - Tinh tế</strong>
+                        <a href="<?php echo $value['link'] ?>" class="home-product__link"><?php echo $value['name'] ?></a>
+                        <strong class="home-product__title"><?php echo $value['desc'] ?></strong>
                     </div>
                 </div>
-                <div class="home-product-second_top2 home-product-item">
-                    <img class="home-product__img" src="https://noithatkenli.vn/wp-content/uploads/2018/05/ban-tra.jpg" alt="">
-                    <div class="home-product__info">
-                        <a href="" class="home-product__link">Bàn ghế ban công/sân vườn</a>
-                        <strong class="home-product__title">Hiện đại - Khác biệt</strong>
-                    </div>
-                </div>
+
+                <?php
+                    $i++;
+                } ?>
             </div>
-            <div class="home-product-second_bottom home-product-item">
-                <img class="home-product__img" src="https://noithatkenli.vn/wp-content/uploads/2018/05/anh-ban-ghe-an-02.jpg" alt="">
-                <div class="home-product__info">
-                    <a href="" class="home-product__link">Bàn ghế ăn nhập khẩu</a>
-                    <strong class="home-product__title">Tiện nghi - Bền bỉ</strong>
-                </div>
-            </div>
+            <?php } ?>
         </div>  
     </div>
 </div>
+
+<style type="text/css">
+    .home-product-second_top1, .home-product-second_top2 {
+        max-height: 588px;
+        overflow: hidden;
+    }
+    .home-product-second_bottom {
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+    }
+    .home-product-second_bottom .home-product-item:first-child {
+        width: 60%;
+        display: block;
+        position: relative;
+        max-height: 588px;
+        overflow: hidden;
+        border-right: 1px solid #fff;
+    }
+    .home-product-second_bottom .home-product-item:last-child {
+        width: 40%;
+        display: block;
+        position: relative;
+        max-height: 588px;
+        overflow: hidden;
+    }
+
+    @media(max-height: 575.98px) {
+        .home-product-second_bottom {
+            display: block;
+        }
+        .home-product-second_bottom .home-product-item:first-child,
+        .home-product-second_bottom .home-product-item:last-child {
+            width: 100%;
+        }
+    }
+</style>

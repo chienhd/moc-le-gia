@@ -125,7 +125,7 @@ get_footer();
         margin-top: 30px;
         padding-top: 30px;
         padding-bottom: 30px;
-        background: #222222;
+        background: #100000;
     }
     .show-room__slider .owl-nav button {
         height: 33px;
