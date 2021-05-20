@@ -165,7 +165,17 @@
 	    -webkit-line-clamp: 3;
 	    -webkit-box-orient: vertical;
 	}
-
+	@media(max-width: 991.98px) {
+		.home-interior-knowledge__slider .owl-prev, .home-interior-knowledge__slider .owl-next {
+			position: relative;
+		}
+		.home-interior-knowledge__slider .owl-prev {
+			left: 0;
+		}
+		.home-interior-knowledge__slider .owl-next {
+			right: 0;
+		}
+	}
 	@media (max-width: 767.98px) {
 		.home-interior-knowledge .content_item .post_meta a {
 			min-height: auto;
@@ -174,9 +184,6 @@
 		}
 		.home-interior-knowledge .content_item .post_meta .excerpt {
 			text-align: center;
-		}
-		.home-interior-knowledge__slider .owl-nav {
-			display: none !important;
 		}
 	}
 

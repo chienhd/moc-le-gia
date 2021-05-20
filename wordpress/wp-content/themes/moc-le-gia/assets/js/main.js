@@ -255,10 +255,15 @@ $('.home-interior-knowledge__slider').owlCarousel({
             items: 2
         },
         768: {
+            margin: 20,
+            items: 2,
+        },
+        992: {
+            margin: 25,
             items: 3,
-            nav: true,
         },
     },
+    nav: true,
     margin: 20,
     padding: 20,
     smartSpeed: 450,
