@@ -399,8 +399,14 @@ get_footer();
         color: #9f0000 !important;
     }
 
-     /* --------------------------------------------- List bien the --------------------------------------------------- */
+    @media(max-width: 991.98px) {
+        .product-carousel .owl-item .item {
+            padding-top: 78%;
+        }
     }
+
+     /* --------------------------------------------- List bien the --------------------------------------------------- */
+
     .list_bienthe {
         background: #f2f2f2 !important;
     }

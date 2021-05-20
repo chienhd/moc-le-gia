@@ -140,12 +140,29 @@ $('.product-carousel').owlCarousel({
     center: true,
     items: 2,
     loop: true,
-    margin: 40,
+    
     nav: true,
     dots: false,
     responsive: {
-        600: {
-            items: 2
+        0: {
+            items: 1,
+            margin: 10,
+        },
+        576: {
+            items: 2,
+            margin: 10,
+        },
+        768: {
+            items: 2,
+            margin: 15,
+        },
+        992: {
+            items: 2,
+            margin: 20,
+        },
+        1024: {
+            items: 2,
+            margin: 30,
         }
     },
     // navText: [

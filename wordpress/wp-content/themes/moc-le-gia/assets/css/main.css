@@ -113,7 +113,7 @@ body {
 
 @media (max-width: 991.98px) {
     #logo {
-        height: 50px;
+        height: 60px;
         width: auto;
     }
 }
@@ -140,7 +140,7 @@ body {
 #primary-menu .menu-item {
     display: inline-grid;
     position: relative;
-    padding: 0 10px;
+    padding: 0 9px;
 }
 
 #primary-menu > .menu-item > a {
@@ -275,11 +275,12 @@ body {
     }
 
     .site-header-navbar .navbar-header {
-        background-color: rgb(75 75 74);
+        background-color: #100000;
         padding-left: 15px;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         width: 100%;
+        height: 77px;
     }
 
     .site-header-navbar .container {
@@ -295,12 +296,12 @@ body {
         box-shadow: none;
         -webkit-box-shadow: none;
         position: fixed;
-        top: 60px;
+        top: 77px;
         bottom: 0;
         width: 260px;
         overflow-y: auto;
         border-right: 1px solid #ddd;
-        background-color: #222222;
+        background-color: #100000;
         overflow-x: hidden;
         -webkit-transition: -webkit-transform .3s ease;
         -moz-transition: -moz-transform .3s ease;
@@ -399,7 +400,7 @@ body {
         left: 0;
         width: 100%;
         transform: none;
-        background: rgb(34 34 34);
+        background: #100000;
         -webkit-transition: all 0.35s ease-in-out;
         -moz-transition: all 0.35s ease-in-out;
         transition: all 0.35s ease-in-out;
@@ -549,12 +550,47 @@ body {
 }
 
 @media(max-width: 991.98px) {
-    .primary-carousel,
+    .primary-carousel {
+        margin-top: 77px;
+        padding-bottom: 0;
+        height: auto;
+    }
+    .primary-carousel .owl-stage-outer {
+        padding-bottom: 45.35%;
+        height: 0;
+        position: relative;
+    }
+    .primary-carousel .owl-nav{
+        margin-top: 0 !important;
+    }
     .primary-carousel .owl-item .item {
-        padding-bottom: 42%;
+        padding-bottom: 45.35%;
     }
     .primary-carousel .owl-dots {
-        bottom: 10px;
+        height: 70px;
+        overflow: hidden;
+        box-sizing: border-box;
+        margin-top: 0 !important;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px 0;
+        -webkit-transform: initial;
+        -moz-transform: initial;
+        -o-transform: initial;
+        transform: initial;
+    }
+    .primary-carousel .owl-dots .owl-dot span {
+        background: #edebeb !important;
+    }
+    .primary-carousel .owl-prev, .primary-carousel .owl-next {
+        top: 35%;
+        -webkit-transform: translateY(-35%);
+        -moz-transform: translateY(-35%);
+        -o-transform: translateY(-35%);
+        transform: translateY(-35%);
     }
 }
 
@@ -933,7 +969,6 @@ body {
 }
 .home-product-second {
     position: relative;
-   /* width: 67%;*/
     width: 100%;
     /*display: flex;
     align-items: center;
@@ -961,7 +996,32 @@ body {
     width: 100%;
    /* position: relative;*/
 }
+ .home-product-second_top1, .home-product-second_top2 {
+    max-height: 588px;
+    overflow: hidden;
+}
+.home-product-second_bottom {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+.home-product-second_bottom .home-product-item:first-child {
+    width: 60%;
+    display: block;
+    position: relative;
+    max-height: 588px;
+    overflow: hidden;
+    border-right: 1px solid #fff;
+}
+.home-product-second_bottom .home-product-item:last-child {
+    width: 40%;
+    display: block;
+    position: relative;
+    max-height: 588px;
+    overflow: hidden;
+}
 
+    
 @media(max-width: 767.98px) and (min-width: 576px) {
     .home-product__link {
         font-size: 14px;
@@ -982,6 +1042,7 @@ body {
     }
     .home-product-second_top {
         display: block;
+        position: relative;
     }
     .home-product-item {
         width: 100%;
@@ -989,6 +1050,23 @@ body {
     }
     .home-product__img {
         height: 100%;
+    }
+    .home-product-second_bottom {
+        display: block !important;
+        position: relative;
+    }
+    .home-product-second_bottom::after,
+    .home-product-second_top::after {
+        display: table;
+        content: "";
+        clear: both;
+    }
+    
+    .home-product-second_bottom .home-product-item:first-child {
+        width: 100% !important;
+    }
+    .home-product-second_bottom .home-product-item:last-child {
+        width: 100% !important;
     }
 }
 /*--------------------------------------------4. Sản phẩm end----------------------------------------------------------*/
@@ -1113,8 +1191,20 @@ body {
     .home-carousel-news__info .excerpt {
         max-width: 100%;
     }
-    .home-carousel-news .owl-prev, .home-carousel-news .owl-next {
+    /*.home-carousel-news .owl-prev, .home-carousel-news .owl-next {
         display: none !important;
+    }*/
+    .home-carousel-news .owl-prev, .home-carousel-news .owl-next {
+        position: relative;
+    }
+    .home-carousel-news .owl-nav {
+        margin-top: 35px;
+    }
+    .home-carousel-news .owl-next {
+        right: 0;
+    }
+    .home-carousel-news .owl-prev {
+        left: 0;
     }
 }
 
@@ -1747,6 +1837,15 @@ back to top*/
 }
 
 @media (max-width: 767.98px) {
+      .support {
+        position: fixed;
+        top: auto;
+        right: 0;
+        z-index: 9999;
+        width: 100%;
+        bottom: 0;
+        height: 41px;
+    }
     .support-item {
         border-radius: 0;
         padding: 5px;
@@ -1755,17 +1854,16 @@ back to top*/
         float: left;
         width: 25%;
         margin-bottom: 0px;
-        border-top: 1px solid #5f3811;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-
-    .support {
-        position: fixed;
-        top: auto;
-        right: 0;
-        z-index: 9999;
-        width: 100%;
-        bottom: 0;
+    .support-item a {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        height: 40px;
     }
     .support-item, .support-item:hover {
         margin-left: 0 !important;
@@ -1777,6 +1875,10 @@ back to top*/
     }
 
     .support-item img {
-        width: 40px;
+        width: 100%;
+        height: auto;
+        display: block;
+        max-width: 40px;
+        float: initial;
     }
 }
