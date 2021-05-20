@@ -44,7 +44,7 @@ get_header();
                 <?php foreach ($attachment_ids as $key => $attachment_id) { ?>
 				<div class="item">
 					<img src="<?php echo wp_get_attachment_url( $attachment_id, 'medium_large' ); ?>" alt="<?php echo wp_get_attachment_url( $attachment_id, 'medium_large' ) ?>">
-                    <div class="download-attachment" data-url="<?php echo wp_get_attachment_url( $attachment_id, 'medium_large' ); ?>"><img src="/wp-content/themes/moc-le-gia/assets/images/icon/down-white.svg"></div>
+                    <div class="download-attachment" data-url="<?php echo get_field('add_upload_file')['url']; ?>"><img src="/wp-content/themes/moc-le-gia/assets/images/icon/down-white.svg"></div>
 				</div>
                 <?php } ?>
 			</div>
@@ -332,9 +332,8 @@ get_footer();
         padding-top: 70%;
         position: relative;
         overflow: hidden;
-        background-color: rgba(152,152,152,.8);
     }
-    .product-carousel .owl-item .item img {
+    .product-carousel .owl-item .item > img {
         position: absolute;
         top: 0;
         left: 0;
@@ -343,8 +342,9 @@ get_footer();
         margin: auto;
         display: block;
         width: 100%;
-        height: auto;
-        opacity: 0.3;
+        height: 100%;
+        opacity: 0.5;
+        object-fit: cover;
     }
     .product-carousel .owl-item.active.center img {
         opacity: 1;

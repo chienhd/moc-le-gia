@@ -202,7 +202,7 @@ get_header();
                     <hr>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <img src="<?php echo prefix_get_option('page_introduce_block_1_image')['thumbnail']; ?>" alt="<?php echo prefix_get_option('page_introduce_block_1_image')['thumbnail']; ?>">
+                    <img style="width: 100%; height: auto;" src="<?php echo prefix_get_option('page_introduce_block_1_image')['thumbnail']; ?>" alt="<?php echo prefix_get_option('page_introduce_block_1_image')['thumbnail']; ?>">
                     <div class="number">01</div>
                 </div>
             </div>
@@ -254,7 +254,7 @@ get_header();
             </div>
         </div>
     </section>
-    <?php if(!empty(prefix_get_option('page_introduce_block_5_title'))) : ?>
+    <?php if(!empty(prefix_get_option('page_introduce_block_5_editor'))) : ?>
     <section id="gt5" class="section-nd">
         <div class="container">
             <div class="row">
