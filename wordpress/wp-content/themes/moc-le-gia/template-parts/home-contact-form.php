@@ -1,4 +1,4 @@
-<div id="home-wrap-contact-form" style="background-image: url('/wp-content/themes/client/assets/images/home-customer-bg.jpg')">
+<div id="home-wrap-contact-form" style="background-image: url('/wp-content/themes/moc-le-gia/assets/images/home-customer-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
