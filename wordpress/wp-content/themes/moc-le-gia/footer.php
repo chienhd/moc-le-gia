@@ -63,17 +63,17 @@
 <div class="support">
     <div class="support-item " style="background: #1e130b">
         <a href="<?php echo prefix_get_option('footer_tab_block_5_5'); ?>" style="color: #fff">
-            <img src="https://nhadephanoi.vn/wp-content/themes/client/assets/images/social/messicon.png"><span>Messenger</span>
+            <img src="/wp-content/themes/moc-le-gia/assets/images/social/messicon.png"><span>Messenger</span>
         </a>
     </div>
     <div class="support-item " style="background: #1e130b">
         <a href="tel:<?php echo prefix_get_option('footer_tab_block_5_3') ?>" style="color: #fff">
-            <img src="https://nhadephanoi.vn/wp-content/themes/client/assets/images/social/phoneicon-1.png"><span><?php echo prefix_get_option('footer_tab_block_5_3') ?></span>
+            <img src="/wp-content/themes/moc-le-gia/assets/images/social/phoneicon-1.png"><span><?php echo prefix_get_option('footer_tab_block_5_3') ?></span>
         </a>
     </div>
     <div class="support-item " style="background: #1e130b">
         <a href="<?php echo prefix_get_option('footer_tab_block_5_4') ?>" style="color: #fff">
-            <img src="https://nhadephanoi.vn/wp-content/themes/client/assets/images/social/zaloicon.png"><span>Zalo</span>
+            <img src="/wp-content/themes/moc-le-gia/assets/images/social/zaloicon.png"><span>Zalo</span>
         </a>
     </div>
 </div>
