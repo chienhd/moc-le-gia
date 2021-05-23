@@ -57,21 +57,29 @@ get_header();
         <div class="container">
             <div class="bienthe">
                 <div class="row">
-                    <div class="col col-md-5 col-12">
+                    <div class="col col-md-6 col-12">
                         <?php
-                        $price = $product->get_price();
+                        $price = $product->get_regular_price();
                         if($price) {
                         ?>
-                        <div class="title"><span>Giá bán</span></div>
-                        <span class="amount"><bdi><?php echo number_format($price, 2, ".", ","); ?>&nbsp;<span class="">₫</span></bdi></span>
+                            <div class="title"><span>Giá bán</span></div>
+                            <?php
+                            $sale_price = $product->get_sale_price();
+                            if(!empty($sale_price)) {
+                            ?>
+                            <span class="amount"><bdi><del><?php echo number_format($price, 2, ".", ","); ?></del>&nbsp;<span class="">₫</span></bdi></span>
+                            <span class="amount amount-2"><bdi><?php echo number_format($sale_price, 2, ".", ","); ?>&nbsp;<span class="">₫</span></bdi></span>
+                            <?php } else { ?>
+                            <span class="amount"><bdi><?php echo number_format($price, 2, ".", ","); ?>&nbsp;<span class="">₫</span></bdi></span>
+                            <?php } ?>
                         <?php } ?>            
                         <div class="mgg">
                             <?php echo get_field('add_description_price'); ?>
                         </div>
                     </div>
-                    <div class="col col-md-2 col-12">
-                    </div>
-                    <div class="col col-md-5 col-12">
+                  <!--   <div class="col col-md-2 col-12">
+                    </div> -->
+                    <div class="col col-md-6 col-12">
                         <?php echo get_field('add_description_price_right'); ?>
                     </div>
                 </div>
@@ -419,8 +427,16 @@ get_footer();
         margin-bottom: 15px;
     }
     .bienthe .amount {
-        font-size: 36px;
-        color: #9f0000;
+        font-size: 35px;
+        color: #000;
+        line-height: 1;
+        display: block;
+    }
+    .bienthe .amount-2 {
+        margin-top: 10px;
+    }
+    .bienthe .amount del {
+        color: #666;
     }
     .bienthe small {
         margin-top: 15px;
@@ -429,11 +445,15 @@ get_footer();
         font-size: 16px;
     }
     .mgg, .mgg p {
-        color: #a44800;
+        color: #000;
         font-size: 16px;
         margin: 10px 5px;
         margin-left: 0;
         text-align: left;
+    }
+    .mgg span, .mgg p > span, .mgg strong, .mgg a, 
+    .bienthe a, .bienthe span, .bienthe p, .bienthe strong, .bienthe b, .bienthe li {
+        color: #000 !important;
     }
     /* --------------------------------------------- Chi tiet san pham --------------------------------------------------- */
     .chitiet_sanpham {
@@ -823,9 +843,12 @@ get_footer();
     }
     h1.title-header{font-size:35px;line-height:1.3;color:#000;font-weight:600;color:#fff;  text-align: center; margin-bottom: 15px;}
     h1.title-header span{display:block;text-align:center;font-size:20px;}
-    .mota_title { color:#fff; }
+    .mota_title { color:#fff; padding-left: 15px; padding-right: 15px; text-align: center; }
+    .mota_title > * {
+        text-align: center !important;
+    }
     .so-panel{margin-bottom:0px!important;}
-    .story_product{;position:relative; padding: 20px 0px 40px 0px;}
+    .story_product{;position:relative; padding: 20px 15px 40px 15px;}
     .story_product::before{content:"";position:absolute;left:-100%;height:100%;width:100%;display:block;top:0px;background:#222222;}
     .story_product::after{content:"";position:absolute;right:-100%;height:100%;width:100%;display:block;top:0px;background:#222222;}
     .story_product .textwidget{color:#cccccc;font-size:16px;line-height:1.5;font-style:italic;max-width:950px;display:table;margin:0px auto;text-align:center;}
