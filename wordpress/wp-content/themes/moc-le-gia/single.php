@@ -58,7 +58,7 @@ get_header();
             <div class="bienthe">
                 <div class="row">
                     <div class="col col-md-6 col-12">
-                        <?php
+                        <!-- <?php
                         $price = $product->get_regular_price();
                         if($price) {
                         ?>
@@ -72,7 +72,7 @@ get_header();
                             <?php } else { ?>
                             <span class="amount"><bdi><?php echo number_format($price, 2, ".", ","); ?>&nbsp;<span class="">₫</span></bdi></span>
                             <?php } ?>
-                        <?php } ?>            
+                        <?php } ?>  -->           
                         <div class="mgg">
                             <?php echo get_field('add_description_price'); ?>
                         </div>
@@ -816,7 +816,7 @@ get_footer();
     /* --------------------------------------------- Tab chi tiet --------------------------------------------------- */
     .category-banner {
         height: auto;
-        padding-bottom: 36%;
+        padding-bottom: 70%;
         overflow: hidden;
         position: relative;
     }
