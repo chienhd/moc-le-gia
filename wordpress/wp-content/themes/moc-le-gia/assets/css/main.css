@@ -1610,7 +1610,7 @@ footer {
     font-size: 16px;
     color: #fff;
     line-height: 1.5;
-    min-height: 49px;
+    min-height: 52px;
     margin-top: 10px;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -1704,9 +1704,32 @@ footer .widget a {
     border-top: 1px solid #2f1d0a;
     text-align: center;
 }
-
+.footer_top .col-footer:nth-child(1) {
+    width: 35%;
+}
+.footer_top .col-footer:nth-child(2) {
+    width: 22%;
+}
+.footer_top .col-footer:nth-child(3) {
+    width: 21%;
+}
+.footer_top .col-footer:nth-child(4) {
+    width: 22%;
+}
 
 @media (max-width: 991.98px) {
+    .footer_top .col-footer:nth-child(1) {
+        width: 100%;
+    }
+    .footer_top .col-footer:nth-child(2) {
+        width: 100%;
+    }
+    .footer_top .col-footer:nth-child(3) {
+        width: 100%;
+    }
+    .footer_top .col-footer:nth-child(4) {
+        width: 100%;
+    }
     .footer_widget_title {
         margin: 0px;
         padding: 10px 0;
