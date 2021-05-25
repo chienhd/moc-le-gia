@@ -458,6 +458,10 @@ get_footer();
     .mgg span, .bienthe span {
         color: #000;
     }
+    .bienthe p, .mgg p {
+        margin: 10px 5px;
+    }
+
     /* --------------------------------------------- Chi tiet san pham --------------------------------------------------- */
     .chitiet_sanpham {
         padding: 30px 0px 40px 0px;
@@ -766,6 +770,23 @@ get_footer();
         display: block;
         width: 100%;
     }
+    .sp_lienquan li .featured-thumbnail > a {
+        position: relative;
+        height: 0;
+        padding-bottom: 66.7%;
+        overflow: hidden;
+    }
+    .sp_lienquan li .featured-thumbnail > a > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        object-fit: cover;
+    }
     .sp_lienquan li .content a >span {
         display: block;
         font-size: 13.5px;
@@ -822,6 +843,7 @@ get_footer();
         padding-bottom: 70%;
         overflow: hidden;
         position: relative;
+        margin-top: 77px;
     }
     .category-banner .img-banner {
         height: 100%;
@@ -859,4 +881,17 @@ get_footer();
     .story_product::before{content:"";position:absolute;left:-100%;height:100%;width:100%;display:block;top:0px;background:#222222;}
     .story_product::after{content:"";position:absolute;right:-100%;height:100%;width:100%;display:block;top:0px;background:#222222;}
     .story_product .textwidget{color:#cccccc;font-size:16px;line-height:1.5;font-style:italic;max-width:950px;display:table;margin:0px auto;text-align:center;}
+    @media (max-width: 767.98px) {
+        h1.title-header {
+            font-size: 30px;
+        }
+        h1.title-header span{
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 575.98px) {
+        h1.title-header {
+            font-size: 25px;
+        }
+    }
 </style>

@@ -189,7 +189,25 @@ foreach (wc_get_products($query_args) as $product) {
   /*    display: inline-block;*/
   /*    vertical-align: top;*/
   /*}*/
-
+  .list_post_category .featured-thumbnail > a {
+    position: relative;
+    height: 0;
+    padding-bottom: 66.7%;
+    overflow: hidden;
+    display: block;
+  }
+ .list_post_category .featured-thumbnail > a > img {
+    margin: auto;
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    object-fit: cover;
+ }
   .post_wrapper {
     font-size: 14px;
     line-height: 22px;

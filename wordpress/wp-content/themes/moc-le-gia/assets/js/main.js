@@ -7,7 +7,9 @@ $('span.toggle-sub-menu').click(function () {
     }
     $(this).find('.fa').toggle();
 })
-
+$(".footer_widget_title").click(function () {
+    $(this).next().slideToggle('active');
+});
 $('#btn-toggle-menu').click(function () {
     let isOpen = $('#masthead').hasClass('open');
     if (!isOpen) {

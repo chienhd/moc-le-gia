@@ -76,11 +76,11 @@ get_footer();
         padding-bottom: 36%;
         overflow: hidden;
         position: relative;
-        margin-top: 60px;
+        margin-top: 77px;
     }
     @media(max-width: 991.98px) {
          .category-banner {
-            margin-top: 60px;
+            margin-top: 77px;
          }
     }
     .category-banner .img-banner {

@@ -163,6 +163,9 @@ get_header();
             margin-top: 30px;
         }
     }
+    #slideshow {
+        margin-top: 77px;
+    }
      @media(max-width: 991.98px) {
           #slideshow {
             margin-top: 77px;
