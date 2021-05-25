@@ -451,9 +451,12 @@ get_footer();
         margin-left: 0;
         text-align: left;
     }
-    .mgg span, .mgg p > span, .mgg strong, .mgg a, 
-    .bienthe a, .bienthe span, .bienthe p, .bienthe strong, .bienthe b, .bienthe li {
+    .mgg p > span, .mgg a, 
+    .bienthe a, .bienthe p, .bienthe b, .bienthe li {
         color: #000 !important;
+    }
+    .mgg span, .bienthe span {
+        color: #000;
     }
     /* --------------------------------------------- Chi tiet san pham --------------------------------------------------- */
     .chitiet_sanpham {
@@ -844,6 +847,10 @@ get_footer();
     h1.title-header{font-size:35px;line-height:1.3;color:#000;font-weight:600;color:#fff;  text-align: center; margin-bottom: 15px;}
     h1.title-header span{display:block;text-align:center;font-size:20px;}
     .mota_title { color:#fff; padding-left: 15px; padding-right: 15px; text-align: center; }
+    .mota_title ..mota_title {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .mota_title > * {
         text-align: center !important;
     }

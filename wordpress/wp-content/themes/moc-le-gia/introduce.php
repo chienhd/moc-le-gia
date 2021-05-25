@@ -50,7 +50,7 @@ get_header();
     #introduce #gt1 .number:after{background-color:#fff;}
     #introduce #gt1 p:nth-last-of-type(1){margin-bottom:13px;}
     #introduce p{margin-bottom:25px;}
-    #introduce .title-section, #introduce .title-section h2{margin-top:0; font-size: 26px;}
+    #introduce .title-section, #introduce .title-section h2{margin-top:0; font-size: 26px; line-height: 1.25}
     #introduce #gt1{padding-top:35px;}
     #introduce .number {
         position: absolute;
@@ -165,7 +165,7 @@ get_header();
     }
      @media(max-width: 991.98px) {
           #slideshow {
-            margin-top: 60px;
+            margin-top: 77px;
           }
     }
     @media(max-width: 575.98px) {
