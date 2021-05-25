@@ -409,7 +409,7 @@ get_footer();
 
     @media(max-width: 991.98px) {
         .product-carousel .owl-item .item {
-            padding-top: 78%;
+            padding-top: 67%;
         }
     }
 
