@@ -883,7 +883,7 @@ get_footer();
     .story_product .textwidget{color:#cccccc;font-size:16px;line-height:1.5;font-style:italic;max-width:950px;display:table;margin:0px auto;text-align:center;}
     @media (max-width: 767.98px) {
         h1.title-header {
-            font-size: 30px;
+            font-size: 28px;
         }
         h1.title-header span{
             font-size: 16px;
@@ -891,7 +891,7 @@ get_footer();
     }
     @media (max-width: 575.98px) {
         h1.title-header {
-            font-size: 25px;
+            font-size: 24px;
         }
     }
 </style>
