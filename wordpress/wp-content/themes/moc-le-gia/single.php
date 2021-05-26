@@ -383,7 +383,7 @@ get_footer();
         border: 1px solid black;
         background: transparent;
         display: block;
-        z-index: 1;
+        z-index: 15;
     }
     .product-carousel .owl-prev:hover,
     .product-carousel .owl-next:hover {
@@ -398,6 +398,7 @@ get_footer();
         display: inline-block;
         line-height: 40px !important;
         color: #9f0000 !important;
+        z-index: 15;
     }
     .product-carousel .owl-prev::before {
         content: "\f104" !important;
@@ -408,6 +409,7 @@ get_footer();
         display: inline-block;
         line-height: 40px !important;
         color: #9f0000 !important;
+        z-index: 15;
     }
 
     @media(max-width: 991.98px) {
