@@ -173,6 +173,9 @@ $('.product-carousel').owlCarousel({
     // ]
 });
 
+document.addEventListener("DOMContentLoaded", function(event) { 
+    Chocolat(document.querySelectorAll('.chocolat-parent .chocolat-image'))
+})
 
 /*category product*/
 

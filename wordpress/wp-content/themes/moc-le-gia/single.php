@@ -40,12 +40,12 @@ get_header();
             $attachment_ids = $product->get_gallery_image_ids();
             if($attachment_ids) {
             ?>
-			<div class="product-carousel owl-carousel owl-theme">
+			<div class="product-carousel chocolat-parent owl-carousel owl-theme">
                 <?php foreach ($attachment_ids as $key => $attachment_id) { ?>
-				<div class="item">
+				<a class="item chocolat-image" href="<?php echo wp_get_attachment_url( $attachment_id, 'medium_large' ); ?>">
 					<img src="<?php echo wp_get_attachment_url( $attachment_id, 'medium_large' ); ?>" alt="<?php echo wp_get_attachment_url( $attachment_id, 'medium_large' ) ?>">
                     <div class="download-attachment" data-url="<?php echo get_field('add_upload_file')['url']; ?>"><img src="/wp-content/themes/moc-le-gia/assets/images/icon/down-white.svg"></div>
-				</div>
+				</a>
                 <?php } ?>
 			</div>
             <?php } ?>
@@ -340,6 +340,7 @@ get_footer();
         padding-top: 70%;
         position: relative;
         overflow: hidden;
+        display: block;
     }
     .product-carousel .owl-item .item > img {
         position: absolute;
@@ -381,6 +382,8 @@ get_footer();
         display: block;
         border: 1px solid black;
         background: transparent;
+        display: block;
+        z-index: 1;
     }
     .product-carousel .owl-prev:hover,
     .product-carousel .owl-next:hover {
