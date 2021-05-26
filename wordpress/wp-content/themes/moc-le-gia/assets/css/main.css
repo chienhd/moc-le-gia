@@ -1823,7 +1823,7 @@ back to top*/
 /*support*/
 .support {
     position: fixed;
-    top: 40%;
+    bottom: 15%;
     right: -170px;
     z-index: 100;
 }
