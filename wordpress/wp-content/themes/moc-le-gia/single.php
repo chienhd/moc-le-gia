@@ -899,4 +899,7 @@ get_footer();
             font-size: 24px;
         }
     }
+    .chocolat-wrapper {
+        z-index: 99;
+    }
 </style>
