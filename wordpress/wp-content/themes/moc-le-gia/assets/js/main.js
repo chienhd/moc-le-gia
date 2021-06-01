@@ -39,7 +39,7 @@ $('.primary-carousel').owlCarousel({
     smartSpeed: 450,
     autoHeight: false,
     loop: true,
-    autoplay: false,
+    autoplay: true,
     nav: true,
     navText: [
         "<img src='/wp-content/themes/moc-le-gia/assets/images/icon/prev_banner.png'>", 
@@ -174,7 +174,11 @@ $('.product-carousel').owlCarousel({
 });
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-    Chocolat(document.querySelectorAll('.chocolat-parent .chocolat-image'))
+    Chocolat(document.querySelectorAll('.chocolat-parent .chocolat-image'), {
+        loop: true,
+        imageSize: 'contain',
+        allowZoom: true,
+    }) 
 })
 
 /*category product*/

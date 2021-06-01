@@ -334,6 +334,7 @@ get_footer();
     .product-carousel .owl-item {
         max-height: 650px;
         overflow: hidden;
+        background-color: rgba(0,0,0,.8);
     }
     .product-carousel .owl-item .item {
         height: 0;
@@ -898,8 +899,19 @@ get_footer();
         h1.title-header {
             font-size: 24px;
         }
+        .chocolat-wrapper .chocolat-left {
+            position: absolute;
+            left: 10px;
+        }
+        .chocolat-wrapper .chocolat-right {
+            position: absolute;
+            right: 10px;
+        }
     }
     .chocolat-wrapper {
         z-index: 99;
+    }
+    .chocolat-overlay {
+        background-color: rgba(0,0,0,.8);
     }
 </style>

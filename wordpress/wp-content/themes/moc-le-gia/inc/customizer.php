@@ -59,3 +59,26 @@ function moc_le_gia_customize_preview_js() {
 	wp_enqueue_script( 'moc-le-gia-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
 }
 add_action( 'customize_preview_init', 'moc_le_gia_customize_preview_js' );
+
+/**
+ * short_code_moc_le_gia_contact_form
+ */
+function short_code_moc_le_gia_contact_form() {
+    $html = '<div id="home-wrap-contact-form" style="background-image: url('. prefix_get_option('contact-form-2')['thumbnail'].')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <span class="home-contact-form-title">NHẬN TƯ VẤN VỀ PHONG CÁCH THIẾT KẾ PHÙ HỢP VỚI BẠN</span>
+                            <span class="home-contact-form-right-des">Tư vấn miễn phí. Tặng kèm Ebook những mẫu Thiết kế nội thất</span>
+                            <div id="home-contact-form-right-frm">
+                                ' .
+                                    do_shortcode(prefix_get_option('contact-form-1'))
+                                    .
+                            '</div>
+                        </div>
+                    </div>
+                </div>
+            </div>';
+return $html;
+}
+add_shortcode( 'moc_le_gia_contact_form', 'short_code_moc_le_gia_contact_form' );

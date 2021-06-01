@@ -1625,7 +1625,9 @@ footer .widget p {
 footer .widget a {
     color: #999;
 }
-
+footer .widget a:hover {
+    color: #fff;
+}
 .footer_top ul li {
     list-style-type: none;
 }

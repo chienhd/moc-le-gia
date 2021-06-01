@@ -13,7 +13,7 @@
                     <div class="home-video__top">
                         <img src="<?php echo $value['image']['thumbnail']; ?>" class="home-video__top-before">
                         <div class="home-video__top_start-video">
-                            <img width="64" src="/wp-content/themes/moc-le-gia/assets/images/icon/play-btn.png"/>
+                            <img width="64" src="/wp-content/themes/moc-le-gia/assets/images/icon/play-btn.png"/ align="play-btn.png">
                         </div>
                         <iframe width="100%" height="" src="<?php echo $value['iframe']; ?>" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  frameborder="0" allowfullscreen="1"></iframe>
                     </div>

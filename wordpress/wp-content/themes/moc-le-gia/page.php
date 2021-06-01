@@ -293,7 +293,6 @@ get_footer();
 
   .chitiet_bottom b, .chitiet_bottom strong {
       font-weight: bold;
-      color: #edc14f;
   }
 
   .chitiet_bottom h3, .chitiet_bottom .h3 {
