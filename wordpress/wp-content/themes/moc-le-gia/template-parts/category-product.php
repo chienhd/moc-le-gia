@@ -1,4 +1,4 @@
-<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="col-xs-12 col-sm-6 col-md-4">
     <div class="category__product-item">
         <figure class="featured-thumbnail thumbnail ">
             <a href="<?php echo esc_url(get_permalink()) ?>" title="<?php echo get_the_title(); ?>">
