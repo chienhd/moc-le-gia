@@ -102,7 +102,7 @@ get_footer();
     }
 
     .category__title-section .title-header {
-        font-size: 35px;
+        font-size: 28px;
         color: #000;
         font-weight: 600;
         line-height: 1.2;
