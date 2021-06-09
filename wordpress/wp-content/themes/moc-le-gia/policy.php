@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package client
+ * @package moc-le-gia
  */
 
 get_header();

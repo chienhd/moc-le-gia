@@ -2,7 +2,7 @@
     <div class="category__product-item">
         <figure class="featured-thumbnail thumbnail ">
             <a href="<?php echo esc_url(get_permalink()) ?>" title="<?php echo get_the_title(); ?>">
-               <img alt="<?php echo get_the_title(); ?>" dclass="lazyload lazyloaded" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'post-thumbnails'); ?>">
+               <img alt="<?php echo get_the_title(); ?>" dclass="lazyload lazyloaded" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>">
            </a>
         </figure>
             <div class="post_content">
