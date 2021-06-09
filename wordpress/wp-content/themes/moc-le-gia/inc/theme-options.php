@@ -322,7 +322,7 @@ if (class_exists('CSF')) {
                 'type' => 'text',
                 'title' => 'Thêm short code contact Form',
             ),
-             array(
+            array(
                 'id' => 'contact-form-2',
                 'type' => 'media',
                 'title' => 'Thêm background contact Form',
