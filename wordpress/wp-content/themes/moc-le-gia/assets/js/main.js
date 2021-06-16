@@ -296,3 +296,108 @@ $('.download-attachment').click(function(e) {
     a.click();
     document.body.removeChild(a);
 })
+
+$('.open-quick-view').click(function(e) {
+    e.preventDefault();
+    let $this = $(this);
+    let product_id = $this.attr('data-id');
+    $.ajax({
+        type : "post", //Phương thức truyền post hoặc get
+        dataType : "json", //Dạng dữ liệu trả về xml, json, script, or html
+        url : woocommerce_params.ajax_url, //Đường dẫn chứa hàm xử lý dữ liệu. Mặc định của WP như vậy
+        data : {
+            action: "get_single_product", //Tên action
+            product_id: product_id
+        },
+        beforeSend: function(){
+            //Làm gì đó trước khi gửi dữ liệu vào xử lý
+        },
+        content: this,
+        success: function(response, textStatus, jqXHR) {
+            if(response.success) {
+                let htmlData = response.data;
+
+                $('#append-quick-view-product').html("").html($(htmlData));
+                $('.woocommerce-product-gallery').css('opacity', 1);
+                $('.wpgs-thumb').addClass('owl-carousel owl-theme owl-loaded owl-drag');
+                $('.wpgs-image').addClass('owl-carousel owl-theme owl-loaded owl-drag');
+                var sync1 = $('.wpgs-image'),
+                sync2 = $('.wpgs-thumb'),
+                duration = 300,
+                thumbs = 4;
+
+                // Sync nav
+                sync1.on('click', '.owl-next', function () {
+                    sync2.trigger('next.owl.carousel')
+                });
+                sync1.on('click', '.owl-prev', function () {
+                    sync2.trigger('prev.owl.carousel')
+                });
+
+                // Start Carousel
+                sync1.owlCarousel({
+                    center: true,
+                    loop: true,
+                    items: 1,
+                    margin: 5,
+                    padding: 0,
+                    smartSpeed: 500,
+                    lazyLoad: true,
+                    autoplay: false,
+                    autoplayTimeout: 5000,
+                    autoplayHoverPause: true,
+                    dots: false,
+                    nav: true,
+                    navText: [
+                        '<span class="slick-prev slick-arrow" aria-label="prev" style=""></span>',
+                        '<span class="slick-next slick-arrow" aria-label="Next" style=""></span>'
+                    ]
+                }).on('dragged.owl.carousel', function (e) {
+                    if (e.relatedTarget._drag.direction == 'left') {
+                        sync2.trigger('next.owl.carousel')
+                    } else {
+                        sync2.trigger('prev.owl.carousel')
+                    }
+                });
+
+                sync2.owlCarousel({
+                    loop: true,
+                    items: thumbs,
+                    margin: 2,
+                    autoplay: false,
+                    autoplayTimeout: 5000,
+                    autoplayHoverPause: true,
+                    smartSpeed: 500,
+                    nav: false,
+                    dots: false,
+                    responsive: {
+                        0: {
+                            items: 3
+                        },
+                        768: {
+                            items: 4
+                        }
+                    }
+                }).on('click', '.owl-item', function () {
+                    var i = $(this).index() - (thumbs + 1);
+                    sync2.trigger('to.owl.carousel', [i, duration, true]);
+                    sync1.trigger('to.owl.carousel', [i, duration, true]);
+                });
+
+                $('.woocommerce-product-gallery__lightbox').css({'display': 'block', 'opacity': 1})
+                
+                $('.wpgs-wrapper').css("opacity", "1");
+                $('.wpgs-wrapper').fadeIn();
+
+                $('#modal-quickview-product').modal('show');
+            } else {
+                console.log(response);
+            }
+
+        },
+        error: function( jqXHR, textStatus, errorThrown ){
+            console.log(jqXHR);
+        }
+    })
+    return false;
+})

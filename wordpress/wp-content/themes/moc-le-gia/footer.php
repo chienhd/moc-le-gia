@@ -77,7 +77,22 @@
         </a>
     </div>
 </div>
-
+<!-- Modal -->
+<div class="modal fade" id="modal-quickview-product" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+        </button>
+        </div>
+        <div class="modal-body clearfix">
+            <div class="row" id="append-quick-view-product">
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
 <?php wp_footer(); ?>
 
 </body>

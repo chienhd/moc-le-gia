@@ -203,8 +203,8 @@ get_header();
                     //do_action( 'woocommerce_single_product_summary' );
                     woocommerce_template_single_title();
                     ?>
-                    <p class="price"><span class="amount"><?php echo __('Giá bán', 'moc_le_gia'); ?></span></p>
-                    <?php echo get_the_content(); ?>
+                    <p class="price"><span class="amount"><?php echo __('GIÁ BÁN', 'moc_le_gia'); ?></span></p>
+                    <?php echo get_field('add_description_price'); ?>
                     <div class="phone-group-sales">
                         <a class="btn btn-danger" href="tel:<?php echo get_field('whole_sale'); ?>">Bán sỉ <br><?php echo get_field('whole_sale');?></a>
                         <a class="btn btn-primary" href="tel:<?php echo get_field('retail'); ?>">Bán lẻ <br><?php echo get_field('retail');?></a>
@@ -559,9 +559,6 @@ get_footer();
         height: 1px;
         margin: 0px auto;
         display: block;
-    }
-    a.woocommerce-product-gallery__trigger {
-        display: none;
     }
     /* --------------------------------------------- Video san pham --------------------------------------------------- */
     .video_sanpham_inner {
