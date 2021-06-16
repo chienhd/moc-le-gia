@@ -332,4 +332,10 @@ get_footer();
   .chitiet_bottom h3, .chitiet_bottom .h3 {
       font-size: 22px;
   }
+
+  @media(max-width: 991.9px) {
+    .category__product-item .quick-view {
+      display: none;
+    }
+  }
 </style>

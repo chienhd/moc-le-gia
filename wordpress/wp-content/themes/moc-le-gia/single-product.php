@@ -1007,6 +1007,7 @@ get_footer();
         align-items: center;
         justify-content: flex-start;
         margin-bottom: 10px;
+        margin-top: 10px;
     }
     .phone-group-sales a {
         font-weight: 600;
