@@ -99,7 +99,7 @@ function prefix_ajax_get_single_product() {
             <h3 class="woocommerce__product_title"><?php echo $product->get_title(); ?></h3>
             <p class="woocommerce__price"><span class="amount"><?php echo __('GIÁ BÁN', 'moc_le_gia'); ?></span></p>
             <div>
-                <?php echo get_field('add_description_price', $product_id); ?>
+                <?php echo $product->get_description(); ?>
             </div>
             <div class="phone-group-sales"></div>
             <?php woocommerce_template_single_meta(); ?>
@@ -111,6 +111,6 @@ function prefix_ajax_get_single_product() {
     $result = ob_get_clean();
  
     wp_send_json_success($result);
- 
+    unset ($product);
     die();
 }

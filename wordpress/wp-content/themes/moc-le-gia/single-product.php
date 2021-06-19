@@ -172,7 +172,6 @@ get_header();
         <div class="container">
             <?php the_breadcrumb() ?>
             <?php
-                global $product;
                 $product_id = get_the_ID();
                 $product = new WC_product($product_id);
             ?>
@@ -204,13 +203,14 @@ get_header();
                     woocommerce_template_single_title();
                     ?>
                     <p class="price"><span class="amount"><?php echo __('GIÁ BÁN', 'moc_le_gia'); ?></span></p>
-                    <?php echo get_field('add_description_price'); ?>
+                    <?php echo $product->get_description(); ?>
                     <div class="phone-group-sales">
                         <a class="btn btn-danger" href="tel:<?php echo get_field('whole_sale'); ?>">Bán sỉ <br><?php echo get_field('whole_sale');?></a>
                         <a class="btn btn-primary" href="tel:<?php echo get_field('retail'); ?>">Bán lẻ <br><?php echo get_field('retail');?></a>
                     </div>
                     <?php
                     woocommerce_template_single_meta();
+                    unset($product);
                     ?>
                 </div>
             </div>

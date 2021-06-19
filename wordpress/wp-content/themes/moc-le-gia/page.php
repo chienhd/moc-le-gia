@@ -202,7 +202,7 @@ get_footer();
  .category__product-item .thumbnail > a {
     position: relative;
     height: 0;
-    padding-bottom: 66.7%;
+    padding-bottom: 100%;
     overflow: hidden;
     display: block;
  }

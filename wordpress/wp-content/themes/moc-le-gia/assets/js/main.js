@@ -399,5 +399,4 @@ $('.open-quick-view').click(function(e) {
             console.log(jqXHR);
         }
     })
-    return false;
 })
