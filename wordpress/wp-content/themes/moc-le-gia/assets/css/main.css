@@ -2013,3 +2013,6 @@ back to top*/
     font-size: 16px;
     margin-top: 45px;
 }
+.owl-item.active .thumbnail_image:before {
+    background: transparent !important;
+}

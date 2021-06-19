@@ -399,4 +399,9 @@ $('.open-quick-view').click(function(e) {
             console.log(jqXHR);
         }
     })
+    return false;
+})
+$(document).ready(function() {
+    $('.slick-next.slick-arrow').trigger('click');
+    $('[data-toggle="tooltip"]').tooltip();
 })

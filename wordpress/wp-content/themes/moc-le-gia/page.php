@@ -165,7 +165,7 @@ get_footer();
     transition: all 0.3s ease;
     opacity: 0;
     visibility: hidden;
-    z-index: 1;
+    z-index: 2;
   }
   .category__product-item .quick-view button {
       border: none;
@@ -185,7 +185,7 @@ get_footer();
   }
   .category__product-item .quick-view button i {
     font-size: 18px;
-    margin-left: 5px;
+    margin-left: 0;
   }
 
   .category__product-item .thumbnail {
@@ -198,6 +198,7 @@ get_footer();
       display: block;
       -webkit-transition: all .2s ease-in-out;
       transition: all .2s ease-in-out;
+      position: relative;
   }
  .category__product-item .thumbnail > a {
     position: relative;
@@ -332,7 +333,26 @@ get_footer();
   .chitiet_bottom h3, .chitiet_bottom .h3 {
       font-size: 22px;
   }
+  div.tooltip-inner {
+      font-size: 15px;
+  }
 
+  /*.category__product-item .thumbnail:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0,0,0,.5);
+      opacity: 0;
+      z-index: 1;
+      -webkit-transition: visibility .3s ease,opacity .3s ease;
+      transition: visibility .3s ease,opacity .3s ease;
+  }*/
+  .category__product-item:hover .thumbnail:before {
+    opacity: 1;
+  }
   @media(max-width: 991.9px) {
     .category__product-item .quick-view {
       display: none;

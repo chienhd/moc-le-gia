@@ -1,9 +1,9 @@
 <div class="col-xs-12 col-sm-6 col-md-3">
     <div class="category__product-item">
         <?php if(get_field('special_product')){ ?>
-        <div class="quick-view">
-            <button class="open-quick-view woodmart-tltp" data-id="<?php echo get_the_ID(); ?>">
-                <span class="woodmart-tooltip-label">Xem nhanh</span><i class="fa fa-search" aria-hidden="true"></i>
+        <div class="quick-view" data-toggle="tooltip" data-placement="left" title="Xem nhanh">
+            <button data-id="<?php echo get_the_ID(); ?>" class="open-quick-view woodmart-tltp" >
+                <i class="fa fa-search" aria-hidden="true"></i>
             </button>
         </div>
         <?php } ?>
