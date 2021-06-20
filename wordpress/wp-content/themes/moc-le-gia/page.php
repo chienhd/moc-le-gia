@@ -358,4 +358,7 @@ get_footer();
       display: none;
     }
   }
+  .fancybox-bg, .fancybox-button {
+    background: #000;
+  }
 </style>
