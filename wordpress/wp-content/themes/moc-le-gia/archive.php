@@ -55,9 +55,11 @@ $category = get_queried_object();
         <div class="container">
             <div class="row">
               <?php
+              $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
               $args = array(
-                'posts_per_page' => -1,
+                'posts_per_page' => 16,
                 'post_type' => 'product',
+                'paged' => $paged,
                 'tax_query' => array(
                   array(
                     'taxonomy' => 'product_cat',
@@ -73,6 +75,7 @@ $category = get_queried_object();
                   $query->the_post();
                   get_template_part('template-parts/category', 'product');
                 }
+                my_get_the_category_navigation();
               }
 
               ?>
@@ -358,4 +361,47 @@ get_footer();
       display: none;
     }
   }
+  nav#pagination {
+        clear: both;
+        float: left;
+        margin-top: 20px !important;
+        margin-bottom: 30px;
+    }
+
+    nav#pagination span {
+        font-size: 15px;
+        color: #000;
+        float: left;
+        line-height: 2.1;
+    }
+
+    nav#pagination .page-numbers.current {
+        background: #000 none repeat scroll 0 0 !important;
+        color: #fff !important;
+        line-height: inherit;
+    }
+
+    nav#pagination .page-numbers:hover {
+        color: #fff !important;
+        background: #000 !important;
+        text-decoration: none !important;
+    }
+
+    .page-numbers {
+        background: #fff;
+        color: #000 !important;
+        margin-left: 5px;
+        padding: 3px 10px;
+        float: left;
+        height: 33px;
+        overflow: hidden;
+        border: 1px solid #e6e6e6;
+        margin-bottom: 5px;
+    }
+
+    @media (max-width: 767.98px) {
+        nav#pagination span:first-child {
+            display: none;
+        }
+    }
 </style>
