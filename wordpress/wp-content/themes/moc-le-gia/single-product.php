@@ -1038,4 +1038,10 @@ get_footer();
             max-height: 265px;
         }
     }
+    .woocommerce-product-gallery__trigger {
+        display: none;
+    }
+    .fancybox-bg, .fancybox-button {
+        background: #000;
+    }
 </style>
