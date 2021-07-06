@@ -57,7 +57,7 @@ $category = get_queried_object();
               <?php
               $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
               $args = array(
-                'posts_per_page' => 16,
+                'posts_per_page' => 12,
                 'post_type' => 'product',
                 'paged' => $paged,
                 'tax_query' => array(
