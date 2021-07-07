@@ -233,6 +233,10 @@ get_footer();
       color: #000;
       font-weight: 600;
       font-size: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
   }
 
   .category__product-item .post_content a span:last-child {
