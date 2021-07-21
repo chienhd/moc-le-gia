@@ -969,13 +969,13 @@ get_footer();
     }
     .woocommerce div.product .product_title {
         color: #2d2a2a;
-        font-size: 30px;
+        font-size: 27px;
         font-weight: 600;
     }
     .product_meta>span {
         color: #333;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 14px;
         display: block;
     }
     .product_meta>span span, .product_meta>span a {

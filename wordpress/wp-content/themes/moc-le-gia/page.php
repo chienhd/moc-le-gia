@@ -57,7 +57,7 @@ $category = get_queried_object();
               <?php
               $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
               $args = array(
-                'posts_per_page' => 12,
+                'posts_per_page' => -1,
                 'post_type' => 'product',
                 'paged' => $paged,
                 'tax_query' => array(
@@ -75,7 +75,7 @@ $category = get_queried_object();
                   $query->the_post();
                   get_template_part('template-parts/category', 'product');
                 }
-                my_get_the_category_navigation();
+                // my_get_the_category_navigation();
               }
 
               ?>

@@ -46,7 +46,7 @@
                             'theme_location' => 'menu-1',
                             'menu_id'        => 'primary-menu',
                             'container_id' => 'wrap-primary-menu',
-                            'after' => '<span class="toggle-sub-menu"><i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></span>',
+                            'after' => '<span class="toggle-sub-menu"><i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-down" aria-hidden="true"></i></span>',
                         )
                     );
                     ?>
