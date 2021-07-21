@@ -56,6 +56,14 @@ $cat_id = $cat->cat_ID;
 
                     ?>
                 </div>
+                <div class="row">
+                    <?php
+                    $content = get_field('description-product-category-bottom', $cat->taxonomy . '_' . $cat->term_id);
+                    if (!empty($content)) {
+                        echo $content;
+                    }
+                    ?>
+                </div>
             </div>
         </div>
 
