@@ -216,6 +216,8 @@ get_footer();
         margin-left: auto;
         margin-right: auto;
         display: block;
+        max-width: 100%;
+        height: auto;
      }
 
     .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6,
