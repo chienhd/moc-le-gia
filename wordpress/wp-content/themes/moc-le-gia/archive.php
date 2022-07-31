@@ -53,7 +53,7 @@ $category = get_queried_object();
 
     <div class="category__product">
         <div class="container">
-            <div class="row">
+            <div class="row d-flex flex-wrap">
               <?php
               $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
               $args = array(
@@ -110,6 +110,12 @@ $category = get_queried_object();
 get_footer();
 ?>
 <style type="text/css">
+  .d-flex {
+    display: flex;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
   .category-banner {
       height: auto;
       padding-bottom: 36%;
